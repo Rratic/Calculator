@@ -1,5 +1,23 @@
-# Math
-  This is for pure C++ calculators and maths.  
-  这是为纯C++计算器和数学的库。  
-  As you can see,it is bilingual by now(english+chinese).  
-  你可以看见，目前是双语的。（英语+汉语）
+# Math --- Calculator
+
+## Description:
+
+This is a calculator that supports functions(e.g. sin(30degree))and unit conversion(e.g. 1(g/cm^3)/(kg/m^3)).
+
+## OS
+
+Mainly for windows,I don't know whether it can run on linus,Mac,etc.
+
+## Feature
+
+Pure C++
+
+- Using try-catch-throw
+
+- Using long double
+
+## Language
+
+- en-uk
+
+- zh-CN

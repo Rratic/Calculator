@@ -1,0 +1,326 @@
+<menu_title>
+计算器[基于纯C++]
+</menu_title>
+<menu_info>
+有问题告诉我
+输入正常表达式
+例如：sin(30degree)
+你可以用/help查看帮助
+你可以用/example查看典型例子
+你可以用/diary查看更新日志
+你可以用/debug来调试程序
+</menu_info>
+<diary>
+0.1.0 感谢https://blog.csdn.net/luoluozlb/article/details/78793252
+0.1.1 所有括号支持
+0.1.2 大小写转化
+0.1.3 ans支持和结构建立
+0.1.4 常量_pi_和_e_清屏，时间显示
+0.1.5 更新12函数
+0.2.0 重构异常处理系统，修复8个bug
+0.2.1 更新帮助，4函数
+0.2.2 修复一个致命bug，更新4函数，history
+0.2.3 多彩化，更新2个函数，修复2个bug
+0.2.4 更新example，更新3函数
+0.2.5 变量_hour_,_minute_,_second_支持，增加debug，disdebug，更新1个函数
+0.2.6 功能_random_，更新4个函数
+0.2.7 增加2个异常处理信息
+0.3.0 增加2个函数，重构整个系统，增加单位转化，量纲分析
+0.3.1 增加新的单位和彩蛋
+0.3.2 增加大量单位，常量_earth_
+0.3.3 增加L,mL,Pa,mmHg,cmHg，修复若干bug
+0.4.0 重构读取系统，增加inch,nmi,eV,V,Omega,C,Hz,day,lightsecond,T,week,mile,F
+0.4.1 部分翻译，增加帮助的细节，增加指令/timer,/echo，增加rad,degree
+0.4.2 使用文件读取，部分翻译，重构替换系统
+0.4.3 π，φ，_phi_支持，增加大量文本，/define
+0.4.4 修复若干bug，优化代码，增加/logo
+0.4.5 更新3个函数，添补/define，增加/color，/dice，增加Wb
+0.4.6 更新10个函数，重构随机算法为梅森旋转算法（MT19337），增加/mr，/m+，/m-，/ms，修复一个致命bug
+0.4.7 更新4个函数，增加/date，/lang，percent
+0.4.8 更新3个函数，增加/bin，/oct，/dec，/hex
+0.4.9 修复若干致命bug
+0.4.10 更新1个函数，double->long double，修复1个bug
+0.5.0 组织结构，修复2个bug
+</diary>
+<example>
+[样例1]
+2.3+(1.7-0.9)/0.01
+82.3
+[样例2]
+sin(degree(90))
+1
+[样例3]
+sin(_pi_/2)
+1
+[样例4]
+rand(1,32768)
+42(maybe)
+[样例5]
+isint(2)
+1
+[样例6]
+ans+pow(2,ans)
+3
+history
+11
+history
+2059
+[样例7]
+gcd(36,48)
+12
+[样例8]
+fact(8)
+40320
+[样例9]
+root1(1,-4,3)
+1
+[样例10]
+_hour_*100+_minute_
+2041(maybe)
+[样例11]
+_random_
+0.001251(maybe)
+[样例12]
+23g/cm^3
+23000m^-3*kg
+[样例13]
+/echo
+SiN(_PI_*12)
+sin(3.141592653589793*12)
+[样例14]
+/bin
+67
+100011
+</example>
+<help_menu>
+输入你需要的帮助
+0=指令
+1=运算符
+2=函数
+3=常,变量
+4=Q&A
+5=单位
+6=异常
+</help_menu>
+<help_command>
+指令使用规则：所有指令以/开头
+/help
+帮助
+/exit
+退出
+/diary
+更新日志
+/reset
+重置设置
+/clear
+清屏
+/example
+常用样例
+/debug
+开启调试模式
+/disdebug
+关闭调试模式
+/information
+获取当前版本信息
+/time
+时间
+/echo
+查看一个算式经处理后的结果
+/define
+设置变量_varx_
+设置常量_pi_，_e_，_phi_
+/color
+设置颜色
+/dice
+掷骰子
+/mr
+内存调用入ans
+/m+
+内存增加
+/m-
+内存减少
+/ms
+内存存入ans
+/date
+显示日期
+/lang
+切换语言包
+/bin
+二进制
+/oct
+八进制
+/dec
+十进制
+/hex
+十六进制
+</help_command>
+<help_operator>
++加法，需要同一量纲
+-减法，需要同一量纲
+*乘法
+/除法
+%求余，需要同一量纲
+^幂，指数无量纲
+()[]{}括号，函数括号使用，例sin(0)
+</help_operator>
+<help_func>
+常用函数：
+pow幂sqrt平方根cbrt立方根sqr平方cube立方
+sin,cos,tan,csc,sec,cot三角函数arcsin,arccos,arctan反三角函数
+max较大值min较小值floor向下取整ceil向上取整round四舍五入abs绝对值
+lg对数ln自然对数log常用对数lb二为底的对数
+exp e的幂x2p 2的幂x10p 10的幂
+mod求余rand在范围内随机整数
+sinh,cosh,tanh,csch,sech,coth双曲三角函数arcsinh,arccosh,arctanh,arccsch,arcsech,arccoth反双曲三角函数
+degree角度转化弧度isint是否整数oppo符号转换
+sign符号fact阶乘fact2双阶乘gcd最大公约数lcm最小公倍数
+isprime是否质数npr排列数ncr组合数
+root1一元二次方程较小根root2一元二次方程较大根
+gamma,trunc,digamma
+versin,vercosin正矢函数
+coversin,covercosin余矢函数
+haversin,havercosin半正矢函数
+hacoversin,hacovercosin半余矢函数
+exsec外正割函数
+excsc外余割函数
+fade缓和函数
+fma a*b+c
+*部分调试函数和即将移除的函数未包括在内
+</help_func>
+<help_const>
+_earth_ 9.8N
+_pi_ 3.141592653589793
+π 3.141592653589793
+_e_ 2.718281828459045
+_phi_ 1.618033988749894
+φ 1.618033988749894
+_hour_ 当前小时
+_minute_ 当前分钟
+_second_ 当前秒
+_random_ 0~1中随机数
+ans 之前结果
+history 之前表达式
+_X_ 变量x
+</help_const>
+<help_q&a>
+Q:卡住不动怎么办？
+A:超过5秒就关闭。
+Q:为什么语法这么麻烦？不能用sin30°
+A:避免歧义。
+Q:出现问题怎么办？
+A:联系我，告诉我你输入了什么。
+</help_q&a>
+<help_unit>
+km,m,dm,cm,mm
+t,kg,g,mg
+h,min,s
+A,mA
+K
+mol
+cd
+N
+J,kJ
+W,kW
+kWh
+mL,L
+Pa,mmHg,cmHg
+inch,nmi
+eV,V
+Omega
+C
+Hz
+day
+lightsecond
+T
+week
+mile
+F
+rad
+degree
+Wb
+percent
+</help_unit>
+<help_error>
+NULL
+Unknown Type
+Unknown Word
+Grammer Err
+Math Err(Reason Unknown)
+Infinate
+Not Any Number
+Out Of Function Range
+Code Bug
+No Real Root
+No Root
+Unknown Unit Err
+Dim Operation Err
+Unknown Command
+Command Err
+No Jokes
+</help_error>
+<define_menu>
+选择：
+1=_X_
+2=_pi_
+3=_e_
+4=_phi_
+</define_menu>
+<color_menu>
+1=默认色
+2=黑白
+3=古典
+</color_menu>
+<dice1>
+┌───────────┐
+│           │
+│           │
+│     o     │
+│           │
+│          1│
+└───────────┘
+</dice1>
+<dice2>
+┌───────────┐
+│           │
+│   o       │
+│           │
+│       o   │
+│          2│
+└───────────┘
+</dice2>
+<dice3>
+┌───────────┐
+│           │
+│   o       │
+│     o     │
+│       o   │
+│          3│
+└───────────┘
+</dice3>
+<dice4>
+┌───────────┐
+│           │
+│   o   o   │
+│           │
+│   o   o   │
+│          4│
+└───────────┘
+</dice4>
+<dice5>
+┌───────────┐
+│           │
+│   o   o   │
+│     o     │
+│   o   o   │
+│          5│
+└───────────┘
+</dice5>
+<dice6>
+┌───────────┐
+│           │
+│   o   o   │
+│   o   o   │
+│   o   o   │
+│          6│
+└───────────┘
+</dice6>

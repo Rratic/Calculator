@@ -1,0 +1,321 @@
+<menu_title>
+Calculator[Pure C++ Based]
+</menu_title>
+<menu_info>
+Tell me if anything is wrong.
+Input any expression.
+e.g.sin(30degree)
+You can use/help to get help
+You can use/example to see typical input example
+You can use/diary to see updates in the past
+You can use/debug to start debugging
+</menu_info>
+<diary>
+0.1.0 thanks to https://blog.csdn.net/luoluozlb/article/details/78793252
+0.1.1 all bracket support
+0.1.2 Aa convert
+0.1.3 ans support&structure building
+0.1.4 const numbers _pi_ and _e_,clear,showing time
+0.1.5 updating 12funcs
+0.2.0 rewriting error system,fixing 8bugs
+0.2.1 help support,updating 4funcs
+0.2.2 fixing a fatal bug,updating 4funcs,history support
+0.2.3 colorful,updating 6funcs,fixing 2bugs
+0.2.4 example support,updating 3funcs
+0.2.5 var _hour_,_minute_,_second_ support,adding debug&disdebug,updating 1func
+0.2.6 _random_,updating 4funcs
+0.2.7 updating 2signals
+0.3.0 updating 2funcs,rewriting whole system,adding basic unit convert&dimension analysis
+0.3.1 adding new unit support,easteregg
+0.3.2 adding lots of units,const number _earth_
+0.3.3 adding L,mL,Pa,mmHg,cmHg,fixing uncountable bugs
+0.4.0 rewriting reading system,adding inch,nmi,eV,V,Omega,C,Hz,day,lightsecond,T,week,mile,F
+0.4.1 translating&adding help details,adding commands /timer,/echo,adding rad,degree
+0.4.2 using file reading to output,translating,rewriting replace system
+0.4.3 ¦Ð£¬¦Õ£¬_phi_support,adding plenty of words,/define
+0.4.4 fixing several bugs,adding/logo
+0.4.5 updating 3 funcs,/define,adding/color,/dice,adding Wb
+0.4.6 updating 10 funcs,rewriting random system:MT19337,adding/mr,/m+,/m-,/ms,fixing a fatal bug
+0.4.7 updating 4 funcs,adding /date,/lang,percent
+0.4.8 updating 3 funcs,adding /bin,/oct,/dec,/hex
+0.4.9 fixing fatal bugs
+0.4.10 updating 1 func,fixing a bug,double->long double
+0.5.0 organizing,fixing 2bugs
+</diary>
+<example>
+[sample1]
+2.3+(1.7-0.9)/0.01
+82.3
+[sample2]
+sin(degree(90))
+1
+[sample3]
+sin(_pi_/2)
+1
+[sample4]
+rand(1,32768)
+42(maybe)
+[sample5]
+isint(2)
+1
+[sample6]
+ans+pow(2,ans)
+3
+history
+11
+history
+2059
+[sample7]
+gcd(36,48)
+12
+[sample8]
+fact(8)
+40320
+[sample9]
+root1(1,-4,3)
+1
+[sample10]
+_hour_*100+_minute_
+2041(maybe)
+[sample11]
+_random_
+0.001251(maybe)
+[sample12]
+23g/cm^3
+23000m^-3*kg
+[sample13]
+/echo
+SiN(_PI_*12)
+sin(3.141592653589793*12)
+[sample14]
+/bin
+67
+100011
+</example>
+<help_menu>
+Input the help you need
+0=command
+1=operator
+2=function
+3=variables and const
+4=Q&A
+5=units
+6=errors
+</help_menu>
+<help_command>
+Rule of commands:all commands start with/
+/help
+help
+/exit
+exit
+/diary
+updating history
+/reset
+reset setting
+/clear
+clear
+/example
+examples
+/debug
+start debuging
+/disdebug
+end debuging
+/information
+get information
+/time
+time
+/echo
+see how the calc deal with expressions
+/define
+set var x
+set const_pi_,_e_,_phi_
+/color
+set color
+/dice
+throw a dice
+/mr
+save->ans
+/m+
+add to save
+/m-
+subtract from save
+/ms
+ans->save
+/date
+date
+/lang
+change language pack
+/bin
+bin
+/oct
+oct
+/dec
+dec
+/hex
+hex
+</help_command>
+<help_operator>
++addition,needs the same dimension
+-subtraction,needs the same dimension
+*multiplication
+/division
+%get remainder,needs the same dimension
+^power,the exponent needs zero dimension
+()[]{}bracket,e.x. sin(0)
+</help_operator>
+<help_func>
+Functions:
+pow,sqrt,cbrt,sqr,cube,
+sin,cos,tan,csc,sec,cot,arcsin,arccos,arctan,
+max,min,floor,ceil,round,abs
+lg,ln,log,lb
+exp,x2p,x10p
+mod,rand
+sinh,cosh,tanh,csch,sech,coth,arcsinh,arccosh,arctanh,arccsch,arcsech,arccoth
+degree,isint,oppo
+sign,fact,fact2,gcd,lcm
+isprime,npr,ncr
+root1,root2
+gamma,trunc,digamma
+versin,vercosin,coversin,covercosin,haversin,havercosin,hacoversin,hacovercosin,exsec,excsc
+fade
+fma
+*This does not include funcs that will be deleted.
+</help_func>
+<help_const>
+_earth_ 9.8N
+_pi_ 3.141592653589793
+¦Ð 3.141592653589793
+_e_ 2.718281828459045
+_phi_ 1.618033988749894
+¦Õ 1.618033988749894
+_hour_ hour now
+_minute_ minute now
+_second_ second now
+_random_ rand number of0~1
+ans previous result
+history previous expression
+_X_ var x
+</help_const>
+<help_Q&A>
+Q:What to do when it is showing nothing?
+A:Wait for 5 seconds,if it hasn't changed,close it.
+Q:Why is the grammar difficult?I can't use sin30¡ã
+A:Avoid potential problems.
+Q:How to deal with problems?
+A:Connect me and tell me what you inputed.
+</help_q&a>
+<help_unit>
+km,m,dm,cm,mm
+t,kg,g,mg
+h,min,s
+A,mA
+K
+mol
+cd
+N
+J,kJ
+W,kW
+kWh
+mL,L
+Pa,mmHg,cmHg
+inch,nmi
+eV,V
+Omega
+C
+Hz
+day
+lightsecond
+T
+week
+mile
+F
+rad
+degree
+Wb
+percent
+</help_unit>
+<help_error>
+NULL
+Unknown Type
+Unknown Word
+Grammer Err
+Math Err(Reason Unknown)
+Infinate
+Not Any Number
+Out Of Function Range
+Code Bug
+No Real Root
+No Root
+Unknown Unit Err
+Dim Operation Err
+Unknown Command
+Command Err
+No Jokes
+</help_error>
+<define_menu>
+choose:
+1=_X_
+2=_pi_
+3=_e_
+4=_phi_
+</define_menu>
+<color_menu>
+1=default
+2=black&white
+3=classic
+</color_menu>
+<dice1>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦           ©¦
+©¦     o     ©¦
+©¦           ©¦
+©¦          1©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice1>
+<dice2>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦   o       ©¦
+©¦           ©¦
+©¦       o   ©¦
+©¦          2©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice2>
+<dice3>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦   o       ©¦
+©¦     o     ©¦
+©¦       o   ©¦
+©¦          3©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice3>
+<dice4>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦   o   o   ©¦
+©¦           ©¦
+©¦   o   o   ©¦
+©¦          4©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice4>
+<dice5>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦   o   o   ©¦
+©¦     o     ©¦
+©¦   o   o   ©¦
+©¦          5©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice5>
+<dice6>
+©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
+©¦           ©¦
+©¦   o   o   ©¦
+©¦   o   o   ©¦
+©¦   o   o   ©¦
+©¦          6©¦
+©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+</dice6>
