@@ -143,6 +143,18 @@ void docommand(){
 		else if(order=="/dec")calc_base=10;
 		else if(order=="/hex")calc_base=16;
 		else if(order=="/base")cin>>calc_base;
+		else if(order=="/sort"){
+			int temp;
+			vector<realn>a;
+			realn b;
+			cin>>temp;
+			for(int i=0;i<temp;i++){
+				cin>>b;
+				a.push_back(b);
+			}
+			sort(a.begin(),a.end());
+			for(vector<realn>::iterator it=a.begin();it!=a.end();++it)cout<<(*it)<<'\n';
+		}
 		else throw UnknownOrder;
 	}
 	catch(ErrType i){

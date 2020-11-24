@@ -1,12 +1,12 @@
 #include"calcexpress.h" 
 /*Static Data*/
-string expression::ptrList[]={"f(",",","+","-","*","/","(",")","#","%","^"};
-int expression::ptrArgCnt[]={0,1,2,2,2,2,0,0,0,2,2};
+string expression::ptrList[EXP_PTR_NUM]={"f(",",","+","-","*","/","(",")","#","%","^"};
+int expression::ptrArgCnt[EXP_PTR_NUM]={0,1,2,2,2,2,0,0,0,2,2};
 string expression::funList[EXP_FUN_NUM]={
-	"sin(","cos(","tan(","pow(","sqr(","cube(",
+	"sin(","cos(","tan(","csc(","sec(","cot(",
 	"max(","min(","sqrt(","floor(","ln(","cbrt(",
 	"abs(","exp(","lg(","ceil(","round(","lb(",
-	"csc(","sec(","cot(","arcsin(","arccos(","arctan(",
+	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
 	"arcsinh(","arccosh(","arctanh(","one(","id(","sum(",
 	"x10p(","x2p(","degree(","isint(","oppo(","average(",
@@ -19,10 +19,10 @@ string expression::funList[EXP_FUN_NUM]={
 	//zeta
 };
 int expression::funArgCnt[EXP_FUN_NUM]={
-    1,1,1,2,1,1,
+    1,1,1,1,1,1,
     2,2,1,1,1,1,
     1,1,1,1,1,1,
-    1,1,1,1,1,1,
+    2,1,1,1,1,1,
     2,2,2,1,1,1,
     1,1,1,1,1,2,
     1,1,1,1,1,2,
@@ -33,7 +33,7 @@ int expression::funArgCnt[EXP_FUN_NUM]={
     1,1,1,1,1,1,
     1,1,3,
 };
-int expression::preceMap[][EXP_PTR_NUM]={
+int expression::preceMap[EXP_PTR_NUM][EXP_PTR_NUM]={
 //   f(  , +  -  *  /  (   )  #  %  ^
     {-1,-1,-1,-1,-1,-1,-1, 1, 1,-1,-1},//f(
     { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},//,
@@ -116,15 +116,26 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 	int n=arg.size();
 	int id=getFunIndex(fun);
 	try{
-		//for(int i=0;i<n;i++)if(!arg[i].ispure)throw OutOfRange;
 		if(id>=42&&id<=48)for(int i=0;i<n;i++)if(!isint(arg[i])||arg[i]<0)throw OutOfRange;
     	switch(id){
         	case 0:return sin(arg[0]);
         	case 1:return cos(arg[0]);
        		case 2:return tan(arg[0]);
-        	case 3:return pow(arg[0],arg[1]);
-        	case 4:return arg[0]*arg[0];
-        	case 5:return arg[0]*arg[0]*arg[0];
+       		case 3:{
+        		realn temp=sin(arg[0]);
+        		if(temp==0)throw OutOfRange;
+        		return 1/temp;
+			}
+        	case 4:{
+        		realn temp=cos(arg[0]);
+        		if(temp==0)throw OutOfRange;
+        		return 1/temp;
+        	}
+        	case 5:{
+        		realn temp=tan(arg[0]);
+        		if(temp==0)throw OutOfRange;
+        		return 1/temp;
+			}
         	case 6:{
         		realn temp=arg[0];
         		for(int i=1;i<n;i++)temp=max(temp,arg[i]);
@@ -157,21 +168,9 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
         		if(arg[0]<0)throw OutOfRange;
         		log2(arg[0]);
 			}
-        	case 18:{
-        		realn temp=sin(arg[0]);
-        		if(temp==0)throw OutOfRange;
-        		return 1/temp;
-			}
-        	case 19:{
-        		realn temp=cos(arg[0]);
-        		if(temp==0)throw OutOfRange;
-        		return 1/temp;
-        	}
-        	case 20:{
-        		realn temp=tan(arg[0]);
-        		if(temp==0)throw OutOfRange;
-        		return 1/temp;
-			}
+			case 18:return pow(arg[0],arg[1]);
+        	case 19:return arg[0]*arg[0];
+        	case 20:return arg[0]*arg[0]*arg[0];
 			case 21:return asin(arg[0]);
 			case 22:return acos(arg[0]);
 			case 23:return atan(arg[0]);

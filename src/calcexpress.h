@@ -6,6 +6,7 @@
 #include<stack>
 #include<cstdlib>
 #include<map>
+#include<algorithm>
 #include<cstdio>
 #define EXP_PTR_NUM 11
 #define EXP_FUN_NUM 75

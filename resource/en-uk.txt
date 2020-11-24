@@ -41,6 +41,7 @@ You can use/debug to start debugging
 0.4.9 fixing fatal bugs
 0.4.10 updating 1 func,fixing a bug,double->long double
 0.5.0 organizing,fixing 2bugs
+0.5.1 adding /sort
 </diary>
 <example>
 [sample1]
@@ -153,6 +154,8 @@ oct
 dec
 /hex
 hex
+/sort
+input the number of numbers first,then input each number,it will sort it
 </help_command>
 <help_operator>
 +addition,needs the same dimension
