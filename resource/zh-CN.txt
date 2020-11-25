@@ -42,6 +42,7 @@
 0.4.10 更新1个函数，double->long double，修复1个bug
 0.5.0 组织结构，修复2个bug
 0.5.1 增加/sort
+0.5.2 添补/base，增加/sum，/average，删除若干函数（当前名为deleted）
 </diary>
 <example>
 [样例1]
@@ -154,8 +155,12 @@ sin(3.141592653589793*12)
 十进制
 /hex
 十六进制
+/base
+输入进制数（2-16）
 /sort
 输入数据个数，然后输入各个数据进行排序
+/sum
+/average
 </help_command>
 <help_operator>
 +加法，需要同一量纲

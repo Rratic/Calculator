@@ -1,5 +1,5 @@
 #include"calcintergrate.h"
-//,/max,/min,/sort,/average,/sum,/median,/range,/roots
+//,/max,/min,/median,/range,/roots
 //conj,isnan,isinf future
 int main(int argc,char *argv[])
 {
@@ -24,7 +24,8 @@ int main(int argc,char *argv[])
     	message="";
     	order="";
     	cout<<"\n\033[0mInput--->";
-    	rewind(stdin);
+    	cin.clear();
+    	cin.sync();
     	getline(cin,order);
     	cvector res;
         try{

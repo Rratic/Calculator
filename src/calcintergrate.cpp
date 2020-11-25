@@ -55,7 +55,7 @@ void docommand(){
 		int len=order.length();
 		for(int i=1;i<len;++i)if(order[i]>='A'&&order[i]<='Z')order[i]=order[i]-'A'+'a';
 		if(order=="/easteregg"){
-			long long temp=10000+rrand()%100000;
+			long long temp=65536+rrand()%131072;
 			while(1){
 				if(temp==1)break;
 				if(temp%2==0)temp/=2;
@@ -142,7 +142,12 @@ void docommand(){
 		else if(order=="/oct")calc_base=8;
 		else if(order=="/dec")calc_base=10;
 		else if(order=="/hex")calc_base=16;
-		else if(order=="/base")cin>>calc_base;
+		else if(order=="/base"){
+			unsigned short temp;
+			cin>>temp;
+			if(temp<2||temp>16)throw OutOfRange;
+			calc_base=temp;
+		}
 		else if(order=="/sort"){
 			int temp;
 			vector<realn>a;
@@ -150,10 +155,33 @@ void docommand(){
 			cin>>temp;
 			for(int i=0;i<temp;i++){
 				cin>>b;
+				cin.clear();
 				a.push_back(b);
 			}
 			sort(a.begin(),a.end());
 			for(vector<realn>::iterator it=a.begin();it!=a.end();++it)cout<<(*it)<<'\n';
+		}
+		else if(order=="/sum"){
+			int temp;
+			realn a,b=0;
+			cin>>temp;
+			for(int i=0;i<temp;i++){
+				cin>>a;
+				cin.clear();
+				b+=a;
+			}
+			cout<<b;
+		}
+		else if(order=="/average"){
+			int temp;
+			realn a,b=0;
+			cin>>temp;
+			for(int i=0;i<temp;i++){
+				cin>>a;
+				cin.clear();
+				b+=a;
+			}
+			cout<<b/temp;
 		}
 		else throw UnknownOrder;
 	}

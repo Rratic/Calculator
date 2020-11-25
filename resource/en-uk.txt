@@ -42,6 +42,7 @@ You can use/debug to start debugging
 0.4.10 updating 1 func,fixing a bug,double->long double
 0.5.0 organizing,fixing 2bugs
 0.5.1 adding /sort
+0.5.2 /base,adding /sum,/average,deleting several funcs(previous name:deleted)
 </diary>
 <example>
 [sample1]
@@ -154,8 +155,12 @@ oct
 dec
 /hex
 hex
+/base
+input base(2-16)
 /sort
 input the number of numbers first,then input each number,it will sort it
+/sum
+/average
 </help_command>
 <help_operator>
 +addition,needs the same dimension

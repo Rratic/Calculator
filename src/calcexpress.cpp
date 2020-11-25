@@ -4,11 +4,11 @@ string expression::ptrList[EXP_PTR_NUM]={"f(",",","+","-","*","/","(",")","#","%
 int expression::ptrArgCnt[EXP_PTR_NUM]={0,1,2,2,2,2,0,0,0,2,2};
 string expression::funList[EXP_FUN_NUM]={
 	"sin(","cos(","tan(","csc(","sec(","cot(",
-	"max(","min(","sqrt(","floor(","ln(","cbrt(",
+	"deleted(","deleted(","sqrt(","floor(","ln(","cbrt(",
 	"abs(","exp(","lg(","ceil(","round(","lb(",
 	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
-	"arcsinh(","arccosh(","arctanh(","one(","id(","sum(",
+	"arcsinh(","arccosh(","arctanh(","deleted(","deleted(","deleted(",
 	"x10p(","x2p(","degree(","isint(","oppo(","average(",
 	"fact(","gcd(","lcm(","isprime(","npr(","ncr(",
 	"fact2(","root1(","root2(","sign(","createv(","createdev(",

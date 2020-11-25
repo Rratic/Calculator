@@ -1,7 +1,7 @@
 #include"calchelper.h"
 void light(string line){
 	int len=line.length();
-    for(int i=0;i<len;i++)
+    for(int i=0;i<len;++i)
     {
         switch(line[i])
         {
@@ -31,7 +31,7 @@ int findalpha(string base,string fi){
 	int len1=base.length();
 	int len2=fi.length();
 	//Do not read the first
-	for(int i=0;i<len1-len2;i++){
+	for(int i=0;i<len1-len2;++i){
 		if(!isalpha(base[i])){
 			string temp=base.substr(i+1,len2);
 			if(temp==fi&&(i+len2==len1-1||!isalpha(base[i+len2+1]))){
