@@ -12,7 +12,7 @@
 #define EXP_FUN_NUM 75
 bool cdebug=false;//debug or not
 string order;
-string lastorder;
+string lastorder="sin(30degree)";
 string message;
 string variable_x;
 cvector lastans,saved;
@@ -57,4 +57,5 @@ private:
     /*Get Args from Stack*/
     bool getArg(stack<cvector>&opnd,vector<cvector>&arg,int n);
 };
+bool is_trigonometric(int id);
 #endif

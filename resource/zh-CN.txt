@@ -43,6 +43,7 @@
 0.5.0 组织结构，修复2个bug
 0.5.1 增加/sort
 0.5.2 添补/base，增加/sum，/average，删除若干函数（当前名为deleted）
+0.5.3 修复1个bug，更改一些细节
 </diary>
 <example>
 [样例1]
@@ -175,12 +176,12 @@ sin(3.141592653589793*12)
 常用函数：
 pow幂sqrt平方根cbrt立方根sqr平方cube立方
 sin,cos,tan,csc,sec,cot三角函数arcsin,arccos,arctan反三角函数
-max较大值min较小值floor向下取整ceil向上取整round四舍五入abs绝对值
+floor向下取整ceil向上取整round四舍五入abs绝对值
 lg对数ln自然对数log常用对数lb二为底的对数
 exp e的幂x2p 2的幂x10p 10的幂
 mod求余rand在范围内随机整数
 sinh,cosh,tanh,csch,sech,coth双曲三角函数arcsinh,arccosh,arctanh,arccsch,arcsech,arccoth反双曲三角函数
-degree角度转化弧度isint是否整数oppo符号转换
+isint是否整数oppo符号转换
 sign符号fact阶乘fact2双阶乘gcd最大公约数lcm最小公倍数
 isprime是否质数npr排列数ncr组合数
 root1一元二次方程较小根root2一元二次方程较大根

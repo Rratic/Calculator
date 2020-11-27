@@ -56,14 +56,14 @@ expression::expression(string &exp)
 }
 int expression::getPtrIndex(const string &ptr)
 {
-    for(int i=0;i<EXP_PTR_NUM;i++){
+    for(int i=0;i<EXP_PTR_NUM;++i){
         if(ptrList[i]==ptr)return i;
     }
     return -1;
 }
 int expression::getFunIndex(const string &fun)
 {
-    for(int i=0;i<EXP_FUN_NUM;i++){
+    for(int i=0;i<EXP_FUN_NUM;++i){
         if(funList[i]==fun)return i;
     }
     return -1;
@@ -116,11 +116,18 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 	int n=arg.size();
 	int id=getFunIndex(fun);
 	try{
+		if(is_trigonometric(id)){
+			for(int i=0;i<n;i++)arg[i]=fmod(arg[i],6.283185307179);
+		}
 		if(id>=42&&id<=48)for(int i=0;i<n;i++)if(!isint(arg[i])||arg[i]<0)throw OutOfRange;
     	switch(id){
         	case 0:return sin(arg[0]);
         	case 1:return cos(arg[0]);
-       		case 2:return tan(arg[0]);
+       		case 2:{
+       			realn temp=tan(arg[0]);
+       			if(abs(temp)>2.5e12)throw Inf;
+       			return temp;
+			} 
        		case 3:{
         		realn temp=sin(arg[0]);
         		if(temp==0)throw OutOfRange;
@@ -446,4 +453,8 @@ void expression::getVal(cvector &res)
     }
     res=opnd.top();
     throw Nothing;
+}
+bool is_trigonometric(int id){
+	if(id<=5||(id>=27&&id<=29)||(id>=57&&id<=66)||(id>=68&&id<=70))return true;
+	return false;
 }
