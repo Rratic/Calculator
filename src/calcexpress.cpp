@@ -9,7 +9,7 @@ string expression::funList[EXP_FUN_NUM]={
 	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
 	"arcsinh(","arccosh(","arctanh(","deleted(","deleted(","deleted(",
-	"x10p(","x2p(","degree(","isint(","oppo(","average(",
+	"x10p(","x2p(","deleted(","isint(","oppo(","average(",
 	"fact(","gcd(","lcm(","isprime(","npr(","ncr(",
 	"fact2(","root1(","root2(","sign(","createv(","createdev(",
 	"gamma(","trunc(","digamma(","versin(","vercosin(","coversin(",
@@ -117,7 +117,18 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 	int id=getFunIndex(fun);
 	try{
 		if(is_trigonometric(id)){
-			for(int i=0;i<n;i++)arg[i]=fmod(arg[i],6.283185307179);
+			if(tri_type==TriRAD)for(int i=0;i<n;i++)arg[i]=fmod(arg[i],6.283185307179);
+			else if(tri_type==TriGRAD){
+				for(int i=0;i<n;i++){
+					arg[i]=fmod(arg[i],400);
+					arg[i]=arg[i]*0.015707963268;//pi/200
+				}
+			}
+			else for(int i=0;i<n;i++){
+				arg[i]=fmod(arg[i],360);
+				arg[i]=arg[i]*0.01745329251994;//pi/180 
+			}
+			
 		}
 		if(id>=42&&id<=48)for(int i=0;i<n;i++)if(!isint(arg[i])||arg[i]<0)throw OutOfRange;
     	switch(id){

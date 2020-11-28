@@ -44,6 +44,7 @@ You can use/debug to start debugging
 0.5.1 adding /sort
 0.5.2 /base,adding /sum,/average,deleting several funcs(previous name:deleted)
 0.5.3 fixing 1bug,changing some details
+0.6.0 adding /rad,/deg,/grad
 </diary>
 <example>
 [sample1]
@@ -162,6 +163,12 @@ input base(2-16)
 input the number of numbers first,then input each number,it will sort it
 /sum
 /average
+/rad
+rad mode
+/deg
+deg mode
+/grad
+grad mode
 </help_command>
 <help_operator>
 +addition,needs the same dimension

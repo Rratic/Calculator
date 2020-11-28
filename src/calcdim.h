@@ -91,7 +91,8 @@ string unit_insert[UNIT_NUM]={
 	"createdev(604800,0,0,1,0,0,0,0)",//week
 	"createdev(1609.334,1,0,0,0,0,0,0)",//mile
 	"createdev(1,-1,-1,4,2,0,0,0)",//farad
-	"1","0.01745329251994",//degree
+	"57.295779513082",//rad in deg mode
+	"0.01745329251994",//degree in rad mode
 	"createdev(1,2,1,-1,-1,0,0,0)",//Wb
 	"0.01",
 };

@@ -1,4 +1,4 @@
-# Math --- Calculator
+# Calculator
 
 ## Description:
 
@@ -7,6 +7,8 @@ This is a calculator that supports functions(e.g. sin(30degree))and unit convers
 ## OS
 
 Mainly for windows,I don't know whether it can run on linus,Mac,etc.
+
+I'm trying to make it more portable.
 
 ## Feature
 

@@ -14,7 +14,7 @@ int main(int argc,char *argv[])
 	srrand(time(nullptr));
     CALCinfo();
     unsigned short count=0;
-	for(int turner=0;true;){
+	for(size_t turner=0;true;){
 		place_get_order:if(count==3){
 			cls;
 			count=0;

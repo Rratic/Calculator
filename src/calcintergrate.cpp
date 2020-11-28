@@ -130,9 +130,9 @@ void docommand(){
 		else if(order=="/m-")saved.minus(lastans);
 		else if(order=="/ms")saved=lastans;
 		else if(order=="/date")ttime.showdate();
-		else if(order=="/deg"){
-			//not yet
-		}
+		else if(order=="/rad")tri_type=TriRAD; 
+		else if(order=="/deg")tri_type=TriDEG;
+		else if(order=="/grad")tri_type=TriGRAD;
 		else if(order=="/lang"){
 			cout<<"language file example:"<<used_file<<'\n';
 			getline(cin,order);
