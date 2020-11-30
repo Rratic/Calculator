@@ -45,7 +45,7 @@ You can use/debug to start debugging
 0.5.2 /base,adding /sum,/average,deleting several funcs(previous name:deleted)
 0.5.3 fixing 1bug,changing some details
 0.6.0 adding /rad,/deg,/grad
-0.6.2 updating 2funcs
+0.6.1 updating 2funcs
 </diary>
 <example>
 [sample1]
