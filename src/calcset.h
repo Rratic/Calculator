@@ -1,4 +1,4 @@
-#ifndef calcset.h
+#ifndef calcset_h
 	#define calcset_h
 #include"calcreadfile.h"
 enum TriType{
@@ -17,7 +17,7 @@ class setting{
 		string __e__;
 		string __phi__;
 		setting();//default
-		setting(string file);
+		bool loadfrom(string file);
 		bool createsave();
 };
 #endif 

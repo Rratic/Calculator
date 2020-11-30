@@ -4,7 +4,7 @@ string expression::ptrList[EXP_PTR_NUM]={"f(",",","+","-","*","/","(",")","#","%
 int expression::ptrArgCnt[EXP_PTR_NUM]={0,1,2,2,2,2,0,0,0,2,2};
 string expression::funList[EXP_FUN_NUM]={
 	"sin(","cos(","tan(","csc(","sec(","cot(",
-	"deleted(","deleted(","sqrt(","floor(","ln(","cbrt(",
+	"sinc(","rect(","sqrt(","floor(","ln(","cbrt(",
 	"abs(","exp(","lg(","ceil(","round(","lb(",
 	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
@@ -20,7 +20,7 @@ string expression::funList[EXP_FUN_NUM]={
 };
 int expression::funArgCnt[EXP_FUN_NUM]={
     1,1,1,1,1,1,
-    2,2,1,1,1,1,
+    1,1,1,1,1,1,
     1,1,1,1,1,1,
     2,1,1,1,1,1,
     2,2,2,1,1,1,
@@ -154,16 +154,13 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
         		if(temp==0)throw OutOfRange;
         		return 1/temp;
 			}
-        	case 6:{
-        		realn temp=arg[0];
-        		for(int i=1;i<n;i++)temp=max(temp,arg[i]);
-        		return temp;
-			}
+        	case 6:return sin(arg[0])/arg[0];
         	case 7:{
-        		realn temp=arg[0];
-        		for(int i=1;i<n;i++)temp=min(temp,arg[i]);
-        		return temp;
-        	}
+        		realn temp=abs(arg[0]);
+				if(temp>0.5)return 0;
+				else if(temp==0.5)return 0.5;
+				return 1;
+			}
         	case 8:{
         		if(arg[0]<0)throw OutOfRange;
         		return sqrt(arg[0]);

@@ -21,38 +21,38 @@ int main(int argc,char *argv[])
 		}
 		if(cdebug)cout<<"\n<TURN"<<turner<<">";
 		turner++;
-    	message="";
-    	order="";
-    	cout<<"\n\033[0mInput--->";
-    	cin.clear();
-    	cin.sync();
-    	getline(cin,order);
-    	cvector res;
-        try{
-        	replace_all(order," ","");
-        	if(order==""){
-        		count++;
-        		goto place_get_order;
+		message="";
+		order="";
+		cout<<"\n\033[0mInput--->";
+		cin.clear();
+		cin.sync();
+		getline(cin,order);
+		cvector res;
+	    try{
+			replace_all(order," ","");
+			if(order==""){
+				count++;
+				goto place_get_order;
 			} 
-        	if(order[0]=='/'){
-        		docommand();
-        		goto place_get_order;
+			if(order[0]=='/'){
+				docommand();
+				goto place_get_order;
 			}
-        	if(doorder())goto place_get_order;
-        	expression num(order);
-        	num.getVal(res);
-        	if(res.isnan())throw Nan;
-        	if(res.isinf())throw Inf;
+			if(doorder())goto place_get_order;
+			expression num(order);
+			num.getVal(res);
+			if(res.isnan())throw Nan;
+			if(res.isinf())throw Inf;
 		}
-        catch(ErrType i){
-        	if(i==Nothing){
-        		cout<<"ans="<<answer_color;
-        		if(cdebug)res.output_info();
-        		else{
+	    catch(ErrType i){
+			if(i==Nothing){
+				cout<<"ans="<<answer_color;
+				if(cdebug)res.output_info();
+				else{
 					if(calc_base!=10)res.output(calc_base);
 					else res.output();
 				} 
-        		lastans=res;
+				lastans=res;
 			}
 			else{
 				cout<<error_color;
@@ -60,9 +60,9 @@ int main(int argc,char *argv[])
 				message=cmessages[i];
 				lastorder="";
 			}
-    	}
-        cout<<message<<"\033[0m\n\n";
-        if(cdebug)cout<<"</TURN"<<turner<<">\n\n";
-    }
+		}
+	    cout<<message<<"\033[0m\n\n";
+	    if(cdebug)cout<<"</TURN"<<turner<<">\n\n";
+	}
     return 0;
 }

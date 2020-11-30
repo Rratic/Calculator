@@ -45,6 +45,7 @@
 0.5.2 添补/base，增加/sum，/average，删除若干函数（当前名为deleted）
 0.5.3 修复1个bug，更改一些细节
 0.6.0 增加/rad,/deg,/grad
+0.6.1 更新2个函数
 </diary>
 <example>
 [样例1]
@@ -95,6 +96,10 @@ sin(3.141592653589793*12)
 /bin
 67
 100011
+[样例15]
+/deg
+tan(45)
+1
 </example>
 <help_menu>
 输入你需要的帮助
@@ -203,6 +208,8 @@ exsec外正割函数
 excsc外余割函数
 fade缓和函数
 fma a*b+c
+sinc辛格函数
+rect矩形函数
 *部分调试函数和即将移除的函数未包括在内
 </help_func>
 <help_const>
@@ -253,8 +260,8 @@ T
 week
 mile
 F
-rad
-degree
+rad(deg模式使用)
+degree(rad模式使用)
 Wb
 percent
 </help_unit>
