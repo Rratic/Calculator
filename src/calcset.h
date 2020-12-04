@@ -7,6 +7,7 @@ enum TriType{
 class setting{
 	private:
 	public:
+		string version;
 		string this_used_file;
 		bool cdebug;
 		unsigned int calc_base;//base default=10
@@ -18,6 +19,6 @@ class setting{
 		string __phi__;
 		setting();//default
 		bool loadfrom(string file);
-		bool createsave();
+		bool createsave(string file);
 };
 #endif 
