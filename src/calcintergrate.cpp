@@ -23,13 +23,13 @@ bool doorder(){
     replace_all(order,"¡Á","*");
     replace_all(order,"¡Â","/");
     replace_all(order,"¡Ì","sqrt");
-	replace_all(order,"_earth_",__earth__);
-	replace_all(order,"_X_",variable_x);
-    replace_all(order,"_pi_",__pi__);
-    replace_all(order,"¦Ð",__pi__);
-    replace_all(order,"_e_",__e__);
-    replace_all(order,"_phi_",__phi__);
-    replace_all(order,"¦Õ",__phi__);
+	replace_all(order,"_earth_",thisset.__earth__);
+	replace_all(order,"_X_",thisset.variable_x);
+    replace_all(order,"_pi_",thisset.__pi__);
+    replace_all(order,"¦Ð",thisset.__pi__);
+    replace_all(order,"_e_",thisset.__e__);
+    replace_all(order,"_phi_",thisset.__phi__);
+    replace_all(order,"¦Õ",thisset.__phi__);
     replace_all(order,"_hour_",to_string(ttime.newtime->tm_hour));
     replace_all(order,"_minute_",to_string(ttime.newtime->tm_min));
     replace_all(order,"_second_",to_string(ttime.newtime->tm_sec));
@@ -50,7 +50,7 @@ bool doorder(){
 	}
 	return false;
 }
-void docommand(){
+void docommand(string file){
 	try{
 		int len=order.length();
 		for(int i=1;i<len;++i)if(order[i]>='A'&&order[i]<='Z')order[i]=order[i]-'A'+'a';
@@ -91,12 +91,12 @@ void docommand(){
 			readnotes("example");
 		}
 		else if(order=="/debug"){
-			cdebug=true;
-			if(cdebug)cout<<"Start Debuging\n";
+			thisset.cdebug=true;
+			if(thisset.cdebug)cout<<"Start Debuging\n";
 		}
 		else if(order=="/disdebug"){
-			if(cdebug)cout<<"End Debuging\n";
-			cdebug=false;
+			if(thisset.cdebug)cout<<"End Debuging\n";
+			thisset.cdebug=false;
 		}
 		else if(order=="/information")CALCinfo();
 		else if(order=="/time"){
@@ -113,16 +113,17 @@ void docommand(){
 			readnotes("define_menu");
 			string temp;
 			getline(cin,temp);
-			if(temp=="1")getline(cin,variable_x);
-			if(temp=="2")getline(cin,__pi__);
-			if(temp=="3")getline(cin,__e__);
-			if(temp=="4")getline(cin,__phi__);
+			if(temp=="1")getline(cin,thisset.variable_x);
+			if(temp=="2")getline(cin,thisset.__pi__);
+			if(temp=="3")getline(cin,thisset.__e__);
+			if(temp=="4")getline(cin,thisset.__phi__);
 		}
 		else if(order=="/color"){
 			readnotes("color_menu");
 			unsigned short temp;
 			cin>>temp;
 			setcolor(temp);
+			thisset.calc_color=temp;
 		}
 		else if(order=="/dice")readnotes("dice"+to_string(rrand()%6+1));
 		else if(order=="/mr")lastans=saved;
@@ -130,23 +131,23 @@ void docommand(){
 		else if(order=="/m-")saved.minus(lastans);
 		else if(order=="/ms")saved=lastans;
 		else if(order=="/date")ttime.showdate();
-		else if(order=="/rad")tri_type=TriRAD; 
-		else if(order=="/deg")tri_type=TriDEG;
-		else if(order=="/grad")tri_type=TriGRAD;
+		else if(order=="/rad")thisset.tri_type=TriRAD; 
+		else if(order=="/deg")thisset.tri_type=TriDEG;
+		else if(order=="/grad")thisset.tri_type=TriGRAD;
 		else if(order=="/lang"){
 			cout<<"language file example:"<<used_file<<'\n';
 			getline(cin,order);
 			if(!loadfile(order))cout<<"Failed to find file:(\n";
 		}
-		else if(order=="/bin")calc_base=2;
-		else if(order=="/oct")calc_base=8;
-		else if(order=="/dec")calc_base=10;
-		else if(order=="/hex")calc_base=16;
+		else if(order=="/bin")thisset.calc_base=2;
+		else if(order=="/oct")thisset.calc_base=8;
+		else if(order=="/dec")thisset.calc_base=10;
+		else if(order=="/hex")thisset.calc_base=16;
 		else if(order=="/base"){
 			unsigned short temp;
 			cin>>temp;
 			if(temp<2||temp>16)throw OutOfRange;
-			calc_base=temp;
+			thisset.calc_base=temp;
 		}
 		else if(order=="/sort"){
 			int temp;
@@ -182,6 +183,10 @@ void docommand(){
 				b+=a;
 			}
 			cout<<b/temp;
+		}
+		else if(order=="/save"){
+			if(thisset.createsave(file))cout<<"Saved Successfully";
+			else cout<<"Failed to save setting :(";
 		}
 		else throw UnknownOrder;
 	}

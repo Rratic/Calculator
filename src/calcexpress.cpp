@@ -117,8 +117,8 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 	int id=getFunIndex(fun);
 	try{
 		if(is_trigonometric(id)){
-			if(tri_type==TriRAD)for(int i=0;i<n;i++)arg[i]=fmod(arg[i],6.283185307179);
-			else if(tri_type==TriGRAD){
+			if(thisset.tri_type==TriRAD)for(int i=0;i<n;i++)arg[i]=fmod(arg[i],6.283185307179);
+			else if(thisset.tri_type==TriGRAD){
 				for(int i=0;i<n;i++){
 					arg[i]=fmod(arg[i],400);
 					arg[i]=arg[i]*0.015707963268;//pi/200
@@ -429,7 +429,7 @@ void expression::getVal(cvector &res)
                     vector<cvector>arg;
                     if(idx!=-1){
                         argCnt=ptrArgCnt[idx];
-                        if(cdebug)cout<<"Operator called:id="<<idx<<"\n";
+                        if(thisset.cdebug)cout<<"Operator called:id="<<idx<<"\n";
                         if(argCnt!=0){
                         	if(!getArg(opnd,arg,argCnt))throw UnknownType;
                             res=calculate(ptr,arg);
@@ -439,7 +439,7 @@ void expression::getVal(cvector &res)
 					else{
                         idx=getFunIndex(ptr);
                         argCnt=funArgCnt[idx];
-                        if(cdebug)cout<<"Function called:id="<<idx<<"\n";
+                        if(thisset.cdebug)cout<<"Function called:id="<<idx<<"\n";
                         if(!getArg(opnd,arg,argCnt))throw UnknownWord;
                         vector<realn>arg2;
                         for(int i=0;i<arg.size();i++){

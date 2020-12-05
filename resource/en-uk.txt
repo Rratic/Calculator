@@ -46,7 +46,7 @@ You can use/debug to start debugging
 0.5.3 fixing 1bug,changing some details
 0.6.0 adding /rad,/deg,/grad
 0.6.1 updating 2funcs
-0.7.0 rewriting save system
+0.7.0 rewriting save system,adding /save
 </diary>
 <example>
 [sample1]
@@ -175,6 +175,8 @@ rad mode
 deg mode
 /grad
 grad mode
+/save
+save settings
 </help_command>
 <help_operator>
 +addition,needs the same dimension

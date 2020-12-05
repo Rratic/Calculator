@@ -46,7 +46,7 @@
 0.5.3 修复1个bug，更改一些细节
 0.6.0 增加/rad,/deg,/grad
 0.6.1 更新2个函数
-0.7.0 重置保存系统
+0.7.0 重置保存系统，增加/save
 </diary>
 <example>
 [样例1]
@@ -177,6 +177,8 @@ tan(45)
 角度制
 /grad
 梯度制
+/save
+保存设置
 </help_command>
 <help_operator>
 +加法，需要同一量纲

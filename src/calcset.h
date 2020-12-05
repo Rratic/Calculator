@@ -12,6 +12,7 @@ class setting{
 		bool cdebug;
 		unsigned int calc_base;//base default=10
 		unsigned int tri_type;//rad,deg,grad default=rad
+		unsigned int calc_color; 
 		string variable_x;
 		string __earth__;
 		string __pi__;

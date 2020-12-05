@@ -4,5 +4,5 @@
 timer ttime;
 void CALCinfo();
 bool doorder();
-void docommand();
+void docommand(string file);
 #endif
