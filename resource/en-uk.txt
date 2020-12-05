@@ -47,6 +47,7 @@ You can use/debug to start debugging
 0.6.0 adding /rad,/deg,/grad
 0.6.1 updating 2funcs
 0.7.0 rewriting save system,adding /save
+0.7.1 updating 2funcs
 </diary>
 <example>
 [sample1]
@@ -206,6 +207,8 @@ fade
 fma
 sinc
 rect
+hypot
+erf
 *This does not include funcs that will be deleted.
 </help_func>
 <help_const>

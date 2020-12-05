@@ -53,4 +53,5 @@ bool setting::createsave(string file){
 	fout<<"\n_e_"<<endl<<__e__;
 	fout<<"\n_phi_"<<endl<<__phi__;
 	fout.close();
+	return true;
 }

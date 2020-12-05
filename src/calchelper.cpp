@@ -1,4 +1,5 @@
 #include"calchelper.h"
+//will be deleted 
 void light(string line){
 	int len=line.length();
     for(int i=0;i<len;++i)
@@ -57,10 +58,10 @@ void setcolor(unsigned short number){
 		return;
 	}
 	if(number==2){
-		title_color="\033[0m";
-		notice_color="\033[0m";
-		error_color="\033[0m";
-		answer_color="\033[0m";
+		title_color="";
+		notice_color="";
+		error_color="";
+		answer_color="";
 		return;
 	}
 	if(number==3){
@@ -72,7 +73,6 @@ void setcolor(unsigned short number){
 	}
 	return;
 }
-//inline funcs
 bool isint(realn test){
 	if(test==floor(test))return 1;
 	return 0;

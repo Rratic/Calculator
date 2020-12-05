@@ -47,6 +47,7 @@
 0.6.0 增加/rad,/deg,/grad
 0.6.1 更新2个函数
 0.7.0 重置保存系统，增加/save
+0.7.1 更新2个函数
 </diary>
 <example>
 [样例1]
@@ -213,6 +214,8 @@ fade缓和函数
 fma a*b+c
 sinc辛格函数
 rect矩形函数
+hypot斜边
+erf误差函数
 *部分调试函数和即将移除的函数未包括在内
 </help_func>
 <help_const>

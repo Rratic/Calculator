@@ -8,7 +8,7 @@ string expression::funList[EXP_FUN_NUM]={
 	"abs(","exp(","lg(","ceil(","round(","lb(",
 	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
-	"arcsinh(","arccosh(","arctanh(","deleted(","deleted(","deleted(",
+	"arcsinh(","arccosh(","arctanh(","hypot(","erf(","deleted(",
 	"x10p(","x2p(","deleted(","isint(","oppo(","average(",
 	"fact(","gcd(","lcm(","isprime(","npr(","ncr(",
 	"fact2(","root1(","root2(","sign(","createv(","createdev(",
@@ -24,7 +24,7 @@ int expression::funArgCnt[EXP_FUN_NUM]={
     1,1,1,1,1,1,
     2,1,1,1,1,1,
     2,2,2,1,1,1,
-    1,1,1,1,1,2,
+    1,1,1,2,1,2,
     1,1,1,1,1,2,
     1,2,2,1,2,2,
     1,3,3,1,2,8,
@@ -203,8 +203,8 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 			case 30:return asinh(arg[0]);
 			case 31:return acosh(arg[0]);
 			case 32:return atanh(arg[0]);
-			case 33:return 1;
-			case 34:return arg[0];
+			case 33:return hypot(arg[0],arg[1]);
+			case 34:return erf(arg[0]);
 			case 35:{
 				realn temp=arg[0];
         		for(int i=1;i<n;i++)temp+=arg[i];

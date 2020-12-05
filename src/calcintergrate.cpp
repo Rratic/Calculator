@@ -122,6 +122,7 @@ void docommand(string file){
 			readnotes("color_menu");
 			unsigned short temp;
 			cin>>temp;
+			cout<<"\033[0m";
 			setcolor(temp);
 			thisset.calc_color=temp;
 		}
