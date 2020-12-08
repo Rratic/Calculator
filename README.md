@@ -14,6 +14,8 @@ I'm trying to make it more portable.
 
 Pure C++
 
+- Using C++11 standard
+
 - Using try-catch-throw
 
 - Using long double

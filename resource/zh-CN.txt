@@ -48,6 +48,7 @@
 0.6.1 更新2个函数
 0.7.0 重置保存系统，增加/save
 0.7.1 更新2个函数
+0.7.2 更新2个函数，增加/max，/min
 </diary>
 <example>
 [样例1]
@@ -180,6 +181,10 @@ tan(45)
 梯度制
 /save
 保存设置
+/max
+最大值
+/min
+最小值
 </help_command>
 <help_operator>
 +加法，需要同一量纲
@@ -216,6 +221,7 @@ sinc辛格函数
 rect矩形函数
 hypot斜边
 erf误差函数
+and,or布尔函数
 *部分调试函数和即将移除的函数未包括在内
 </help_func>
 <help_const>

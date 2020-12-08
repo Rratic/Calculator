@@ -185,8 +185,32 @@ void docommand(string file){
 			}
 			cout<<b/temp;
 		}
+		else if(order=="/max"){
+			int temp;
+			realn a,b;
+			cin>>temp;
+			for(int i=0;i<temp;i++){
+				cin>>a;
+				cin.clear();
+				if(i==1)b=a;
+				if(b<a)b=a;
+			}
+			cout<<b;
+		}
+		else if(order=="/min"){
+			int temp;
+			realn a,b;
+			cin>>temp;
+			for(int i=0;i<temp;i++){
+				cin>>a;
+				cin.clear();
+				if(i==1)b=a;
+				if(b>a)b=a;
+			}
+			cout<<b;
+		}
 		else if(order=="/save"){
-			if(thisset.createsave(file))cout<<"Saved Successfully";
+			if(thisset.createsave(file))cout<<"Saved Successfully:)";
 			else cout<<"Failed to save setting :(";
 		}
 		else throw UnknownOrder;

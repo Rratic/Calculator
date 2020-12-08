@@ -8,8 +8,8 @@ string expression::funList[EXP_FUN_NUM]={
 	"abs(","exp(","lg(","ceil(","round(","lb(",
 	"pow(","sqr(","cube(","arcsin(","arccos(","arctan(",
 	"log(","mod(","rand(","sinh(","cosh(","tanh(",
-	"arcsinh(","arccosh(","arctanh(","hypot(","erf(","deleted(",
-	"x10p(","x2p(","deleted(","isint(","oppo(","average(",
+	"arcsinh(","arccosh(","arctanh(","hypot(","erf(","and(",
+	"x10p(","x2p(","or(","isint(","oppo(","average(",
 	"fact(","gcd(","lcm(","isprime(","npr(","ncr(",
 	"fact2(","root1(","root2(","sign(","createv(","createdev(",
 	"gamma(","trunc(","digamma(","versin(","vercosin(","coversin(",
@@ -25,7 +25,7 @@ int expression::funArgCnt[EXP_FUN_NUM]={
     2,1,1,1,1,1,
     2,2,2,1,1,1,
     1,1,1,2,1,2,
-    1,1,1,1,1,2,
+    1,1,2,1,1,2,
     1,2,2,1,2,2,
     1,3,3,1,2,8,
     1,1,1,1,1,1,
@@ -205,14 +205,10 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 			case 32:return atanh(arg[0]);
 			case 33:return hypot(arg[0],arg[1]);
 			case 34:return erf(arg[0]);
-			case 35:{
-				realn temp=arg[0];
-        		for(int i=1;i<n;i++)temp+=arg[i];
-        		return temp;
-			}
+			case 35:return arg[0]*arg[1];//1and1=1,1and0=0,0and0=0
 			case 36:return pow(10,arg[0]);
 			case 37:return exp2(arg[0]);
-			case 38:return arg[0]*0.01745329251994;
+			case 38:return arg[0]+arg[1]-arg[0]*arg[1];//1or1=1,1or0=1,0or0=0
 			case 39:{
 				if(arg[0]==floor(arg[0]))return 1;
 				return 0;

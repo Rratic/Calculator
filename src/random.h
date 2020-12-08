@@ -1,6 +1,7 @@
 #ifndef random_h
 	#define random_h
 #include<ctime>
+//it will be deleted because of <random>
 using namespace std;
 bool rrand_init;
 int rrand_index;
