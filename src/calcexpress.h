@@ -2,9 +2,7 @@
 	#define calcexpress_h
 #include"calchelper.h"
 #include"calcdim.h"
-#include"random.h"
 #include"calcset.h"
-#include<random> 
 #include<stack>
 #include<cstdlib>
 #include<map>
@@ -12,11 +10,13 @@
 #include<cstdio>
 #define EXP_PTR_NUM 11
 #define EXP_FUN_NUM 75
-string order;
-string lastorder="sin(30degree)";
-string message;
-cvector lastans,saved;
-setting thisset;
+extern random_device thisseed;
+extern mt19937 generatedseed;
+extern string order;
+extern string lastorder;
+extern string message;
+extern cvector lastans,saved;
+extern setting thisset;
 /*TokenType*/
 enum TokenType{
     TKT_NUMBER,

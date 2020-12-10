@@ -1,4 +1,5 @@
 #include"calcreadfile.h"
+string used_file;
 bool make_used_file(string file){
 	file=file.substr(0,file.find_last_of('\\'));
 	file=file.substr(0,file.find_last_of('\\'));

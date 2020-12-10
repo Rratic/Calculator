@@ -49,6 +49,7 @@ You can use/debug to start debugging
 0.7.0 rewriting save system,adding /save
 0.7.1 updating 2funcs
 0.7.2 updating 2funcs,adding /max,/min
+0.7.3 rewriting random system and code structure
 </diary>
 <example>
 [sample1]

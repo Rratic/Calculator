@@ -1,4 +1,8 @@
 #include"calchelper.h"
+string title_color;
+string notice_color;
+string error_color;
+string answer_color;
 //will be deleted 
 void light(string line){
 	int len=line.length();

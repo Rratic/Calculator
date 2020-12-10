@@ -1,4 +1,5 @@
 #include"calcintergrate.h"
+timer ttime;
 void CALCinfo(){
 	cout<<"\033[?25h"<<title_color;
     readnotes("menu_title");
@@ -33,7 +34,8 @@ bool doorder(){
     replace_all(order,"_hour_",to_string(ttime.newtime->tm_hour));
     replace_all(order,"_minute_",to_string(ttime.newtime->tm_min));
     replace_all(order,"_second_",to_string(ttime.newtime->tm_sec));
-    replace_all(order,"_random_",to_string(rrand()/realn(INT_MAX)));
+    uniform_real_distribution<>dis(0,1);
+    replace_all(order,"_random_",to_string(dis(generatedseed)));
 	replace_all(order,"ans",lastans.to_string());
     //units
     for(int i=0;i<UNIT_NUM;i++){
@@ -55,7 +57,8 @@ void docommand(string file){
 		int len=order.length();
 		for(int i=1;i<len;++i)if(order[i]>='A'&&order[i]<='Z')order[i]=order[i]-'A'+'a';
 		if(order=="/easteregg"){
-			long long temp=65536+rrand()%131072;
+			uniform_int_distribution<> dis(65536,196608);
+			long long temp=dis(generatedseed);
 			while(1){
 				if(temp==1)break;
 				if(temp%2==0)temp/=2;
@@ -126,7 +129,11 @@ void docommand(string file){
 			setcolor(temp);
 			thisset.calc_color=temp;
 		}
-		else if(order=="/dice")readnotes("dice"+to_string(rrand()%6+1));
+		else if(order=="/dice"){
+			uniform_int_distribution<> dis(1,6);
+			long long temp=dis(generatedseed);
+			readnotes("dice"+to_string(temp));
+		}
 		else if(order=="/mr")lastans=saved;
 		else if(order=="/m+")saved.plus(lastans);
 		else if(order=="/m-")saved.minus(lastans);

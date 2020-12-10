@@ -1,4 +1,11 @@
-#include"calcexpress.h" 
+#include"calcexpress.h"
+random_device thisseed;
+mt19937 generatedseed(thisseed());
+string order;
+string lastorder="sin(30degree)";
+string message;
+cvector lastans,saved;
+setting thisset;
 /*Static Data*/
 string expression::ptrList[EXP_PTR_NUM]={"f(",",","+","-","*","/","(",")","#","%","^"};
 int expression::ptrArgCnt[EXP_PTR_NUM]={0,1,2,2,2,2,0,0,0,2,2};
@@ -194,7 +201,8 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 			case 26:{
 				int left=ceil(arg[0]);
 				int right=floor(arg[1]);
-				return left+rrand()%(right-left+1);
+				uniform_int_distribution<> dis(left,right);
+				return dis(generatedseed);
 				break;
 			}
 			case 27:return sinh(arg[0]);

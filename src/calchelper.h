@@ -9,6 +9,7 @@
 #include<cstdlib>
 #include<vector>
 #include<limits.h>
+#include<random>
 
 #ifndef __linux
 	#define cls system("cls")
@@ -18,10 +19,10 @@
 #endif
 using namespace std;
 typedef long double realn;
-string title_color;
-string notice_color;
-string error_color;
-string answer_color;
+extern string title_color;
+extern string notice_color;
+extern string error_color;
+extern string answer_color;
 void light(string line);
 void CALClogo();
 int findalpha(string base,string fi);

@@ -12,9 +12,7 @@ int main(int argc,char *argv[])
 			if(!loadfile(order))cout<<"Failed to find file:(\nTrying to load without files...\n";
 		}
 	}
-	
 	setcolor(thisset.calc_color);
-	srrand(time(nullptr));
     CALCinfo();
     unsigned short count=0;
 	for(size_t turner=0;true;){
