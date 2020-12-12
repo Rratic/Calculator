@@ -50,6 +50,7 @@
 0.7.1 更新2个函数
 0.7.2 更新2个函数，增加/max，/min
 0.7.3 重构数据系统和代码结构
+0.7.4 修复1个致命bug
 </diary>
 <example>
 [样例1]
@@ -279,7 +280,6 @@ Wb
 percent
 </help_unit>
 <help_error>
-NULL
 Unknown Type
 Unknown Word
 Grammer Err

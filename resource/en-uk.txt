@@ -50,6 +50,7 @@ You can use/debug to start debugging
 0.7.1 updating 2funcs
 0.7.2 updating 2funcs,adding /max,/min
 0.7.3 rewriting random system and code structure
+0.7.4 fixing a fatal bug
 </diary>
 <example>
 [sample1]
@@ -272,7 +273,6 @@ Wb
 percent
 </help_unit>
 <help_error>
-NULL
 Unknown Type
 Unknown Word
 Grammer Err

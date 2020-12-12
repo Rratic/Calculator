@@ -1,19 +1,20 @@
 #include"calcintergrate.h"
-//,/max,/min,/median,/range,/roots
+// /median,/range,/roots
 //conj,isnan,isinf future
 int main(int argc,char *argv[])
 {
 	system("title Calculator");
-	cls;//to activate the \033 system(?)
+	cls;//to activate the \033 system(?) and clear screen if "title"isn't available
 	if(!thisset.loadfrom(*argv)){
 		if(!make_used_file(*argv)){
 			cerr<<"Default language file unfound:"<<used_file<<"\nInput the file name\n";
 			getline(cin,order);
 			if(!loadfile(order))cout<<"Failed to find file:(\nTrying to load without files...\n";
 		}
+		thisset.this_used_file=used_file;
+		CALCinfo();
 	}
 	setcolor(thisset.calc_color);
-    CALCinfo();
     unsigned short count=0;
 	for(size_t turner=0;true;){
 		place_get_order:if(count==3){

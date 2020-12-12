@@ -19,10 +19,13 @@ bool setting::loadfrom(string file){
 	fin.open(file+"\\save\\setting.data",ios::in);
 	if(!fin.is_open())return false;
 	string temp;
-	while(1){
+	while(true){
 		if(!getline(fin,temp))break;
 		if(fin.fail())return false;
-		if(temp=="this_used_file")fin>>this_used_file;
+		if(temp=="this_used_file"){
+			fin>>this_used_file;
+			used_file=this_used_file;
+		}
 		if(temp=="cdebug")fin>>cdebug;
 		if(temp=="calc_base")fin>>calc_base;
 		if(temp=="tri_type")fin>>tri_type;
@@ -42,7 +45,7 @@ bool setting::createsave(string file){
 	ofstream fout;
 	fout.open(file+"\\save\\setting.data",ios::out);
 	if(!fout.is_open())return false;
-	fout<<"\nthis_used_file"<<endl<<this_used_file;
+	fout<<"\nthis_used_file"<<endl<<used_file;
 	fout<<"\ncdebug"<<endl<<cdebug;
 	fout<<"\ncalc_base"<<endl<<calc_base;
 	fout<<"\ntri_type"<<endl<<tri_type;

@@ -1,7 +1,7 @@
 #include"calcintergrate.h"
 timer ttime;
 void CALCinfo(){
-	cout<<"\033[?25h"<<title_color;
+	cout<<title_color;
     readnotes("menu_title");
     cout<<notice_color;
     readnotes("menu_info");
