@@ -56,7 +56,7 @@ class cvector{
 		bool isnan();
 };
 extern string cmessages[];
-#define UNIT_NUM 45
+#define UNIT_NUM 47
 extern string unit_name[UNIT_NUM];
 extern string unit_insert[UNIT_NUM];
 #endif

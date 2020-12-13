@@ -10,19 +10,13 @@
 #include<vector>
 #include<limits.h>
 #include<random>
-
-#ifndef __linux
-	#define cls system("cls")
-#endif
-#ifdef __linux
-	#define cls system("clear")
-#endif
 using namespace std;
 typedef long double realn;
 extern string title_color;
 extern string notice_color;
 extern string error_color;
 extern string answer_color;
+void cls();
 void light(string line);
 void CALClogo();
 int findalpha(string base,string fi);

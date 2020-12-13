@@ -51,6 +51,7 @@ You can use/debug to start debugging
 0.7.2 updating 2funcs,adding /max,/min
 0.7.3 rewriting random system and code structure
 0.7.4 fixing a fatal bug
+0.7.5 adding atm,kPa and some features,updating 1func,adding /random
 </diary>
 <example>
 [sample1]
@@ -185,6 +186,8 @@ save settings
 max
 /min
 min
+/random
+create random numbers
 </help_command>
 <help_operator>
 +addition,needs the same dimension
@@ -217,6 +220,7 @@ rect
 hypot
 erf
 and,or
+remainder
 *This does not include funcs that will be deleted.
 </help_func>
 <help_const>
@@ -271,22 +275,24 @@ rad(used in deg mode)
 degree(used in rad mode)
 Wb
 percent
+atm
+kPa
 </help_unit>
 <help_error>
 Unknown Type
 Unknown Word
-Grammer Err
-Math Err(Reason Unknown)
-Infinate
-Not Any Number
+Grammer Error
+Math Error(Reason Unknown)
+Infinate Result
+Not Any Number Result
 Out Of Function Range
 Code Bug
 No Real Root
 No Root
-Unknown Unit Err
-Dim Operation Err
+Unknown Unit Error
+Dim Operation Error
 Unknown Command
-Command Err
+Command Error
 No Jokes
 </help_error>
 <define_menu>
@@ -307,7 +313,7 @@ choose:
 ©¦           ©¦
 ©¦     o     ©¦
 ©¦           ©¦
-©¦          1©¦
+©¦        one©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice1>
 <dice2>
@@ -316,7 +322,7 @@ choose:
 ©¦   o       ©¦
 ©¦           ©¦
 ©¦       o   ©¦
-©¦          2©¦
+©¦        two©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice2>
 <dice3>
@@ -325,7 +331,7 @@ choose:
 ©¦   o       ©¦
 ©¦     o     ©¦
 ©¦       o   ©¦
-©¦          3©¦
+©¦      three©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice3>
 <dice4>
@@ -334,7 +340,7 @@ choose:
 ©¦   o   o   ©¦
 ©¦           ©¦
 ©¦   o   o   ©¦
-©¦          4©¦
+©¦       four©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice4>
 <dice5>
@@ -343,7 +349,7 @@ choose:
 ©¦   o   o   ©¦
 ©¦     o     ©¦
 ©¦   o   o   ©¦
-©¦          5©¦
+©¦       five©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice5>
 <dice6>
@@ -352,6 +358,26 @@ choose:
 ©¦   o   o   ©¦
 ©¦   o   o   ©¦
 ©¦   o   o   ©¦
-©¦          6©¦
+©¦        six©¦
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice6>
+<random_menu>
+Choose the type first,then input the number of numbers you need,and input the left/right bounds,etc in the end.
+1=uniform_int_distribution
+2=uniform_real_distribution
+3=bernoulli_distribution
+4=binomial_distribution
+5=negative_binomial_distribution
+6=geometric_distribution
+7=poisson_distribution
+8=exponential_distribution
+9=gamma_distribution
+10=weibull_distribution
+11=extreme_value_distribution
+12=normal_distribution
+13=lognormal_distribution
+14=chi_squared_distribution
+15=cauchy_distribution
+16=fisher_f_distribution
+17=student_t_distribution
+</random_menu>

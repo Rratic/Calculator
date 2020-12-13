@@ -204,19 +204,20 @@ bool cvector::isnan(){
 //
 string cmessages[]={
 	"NULL","Unknown Type",
-	"Unknown Word","Grammer Err",
-	"Math Err(Reason Unknown)","Infinate",
-	"Not Any Number","Out Of Function Range",
+	"Unknown Word","Grammer Error",
+	"Math Error(Reason Unknown)","Infinate Result",
+	"Not Any Number Result","Out Of Function Range",
 	"Code Bug","No Real Root",
-	"No Root","Unknown Unit Err",
-	"Dim Operation Err","Unknown Command",
-	"Command Err","No Jokes",
+	"No Root","Unknown Unit Error",
+	"Dim Operation Error","Unknown Command",
+	"Command Error","No Jokes",
 };
 string unit_name[UNIT_NUM]={"km","m","dm","cm","mm","t","kg","g","mg",
 "h","min","s","A","mA","K","mol","cd",
 "N","J","kJ","W","kW","kWh","mL","L","Pa","mmHg","cmHg",
 "inch","nmi","eV","V","Omega","C","Hz","day","lightsecond","T",
-"week","mile","F","rad","degree","Wb","percent"};
+"week","mile","F","rad","degree","Wb","percent",
+"atm","kPa"};
 string unit_insert[UNIT_NUM]={
 	"createdev(1000,1,0,0,0,0,0,0)","createdev(1,1,0,0,0,0,0,0)","createdev(0.1,1,0,0,0,0,0,0)","createdev(0.01,1,0,0,0,0,0,0)","createdev(0.001,1,0,0,0,0,0,0)",
 	"createdev(1000,0,1,0,0,0,0,0)","createdev(1,0,1,0,0,0,0,0)","createdev(0.001,0,1,0,0,0,0,0)","createdev(0.000001,0,1,0,0,0,0,0)",
@@ -245,4 +246,5 @@ string unit_insert[UNIT_NUM]={
 	"0.01745329251994",//degree in rad mode
 	"createdev(1,2,1,-1,-1,0,0,0)",//Wb
 	"0.01",
+	"createdev(101325,-1,1,-2,0,0,0,0)","createdev(1000,-1,1,-2,0,0,0,0)",
 };

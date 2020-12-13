@@ -79,7 +79,17 @@ void docommand(string file){
 			else if(order=="6")readnotes("help_error");
 			else throw JokeErr;
 		}
-    	else if(order=="/exit")exit(0);
+    	else if(order=="/exit"){
+			cout<<"Do you want to save setting?(y/others)\n";
+			string temp;
+			cin>>temp;
+			if(temp=="y"||temp=="Y"){
+				if(thisset.createsave(file))cout<<"Saved Successfully:)";
+				else cout<<"Failed to save setting:(";
+				system("pause");
+			}
+			exit(0);
+		} 
     	else if(order=="/diary")readnotes("diary");
 		else if(order=="/reset"){
 			lastans=0;
@@ -130,9 +140,13 @@ void docommand(string file){
 			thisset.calc_color=temp;
 		}
 		else if(order=="/dice"){
-			uniform_int_distribution<> dis(1,6);
+			uniform_int_distribution<>dis(1,6);
 			long long temp=dis(generatedseed);
 			readnotes("dice"+to_string(temp));
+		}
+		else if(order=="/random"){
+			readnotes("random_menu");
+			makerandom();
 		}
 		else if(order=="/mr")lastans=saved;
 		else if(order=="/m+")saved.plus(lastans);
@@ -218,7 +232,7 @@ void docommand(string file){
 		}
 		else if(order=="/save"){
 			if(thisset.createsave(file))cout<<"Saved Successfully:)";
-			else cout<<"Failed to save setting :(";
+			else cout<<"Failed to save setting:(";
 		}
 		else throw UnknownOrder;
 	}
@@ -226,3 +240,133 @@ void docommand(string file){
 		throw i;
 	}
 }
+#define __temp_output for(unsigned int i=0;i<count;++i)cout<<dis(generatedseed)<<'\n'
+void makerandom(){
+	unsigned int choose,count;
+	cin>>choose>>count;
+	switch(choose){
+		case 1:{
+			long long left,right;
+			cin>>left>>right;
+			uniform_int_distribution<long long>dis(left,right);
+			__temp_output;
+			break;
+		}
+		case 2:{
+			long double left,right;
+			cin>>left>>right;
+			uniform_real_distribution<long double>dis(left,right);
+			__temp_output;
+			break;
+		}
+		case 3:{
+			long double temp;
+			cin>>temp;
+			bernoulli_distribution dis(temp);
+			__temp_output;
+			break;
+		}
+		case 4:{
+			long long temp;
+			double temp2;
+			cin>>temp>>temp2;
+			binomial_distribution<long long>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 5:{
+			long long temp;
+			long double temp2;
+			cin>>temp>>temp2;
+			negative_binomial_distribution<long long>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 6:{
+			long double temp;
+			cin>>temp;
+			geometric_distribution<long long>dis(temp);
+			__temp_output;
+			break;
+		}
+		case 7:{
+			long long temp;
+			cin>>temp;
+			poisson_distribution<long long>dis(temp);
+			__temp_output;
+			break;
+		}
+		case 8:{
+			long double temp2;
+			cin>>temp2;
+			exponential_distribution<long double>dis(temp2);
+			__temp_output;
+			break;
+		}
+		case 9:{
+			long double temp,temp2;
+			cin>>temp>>temp2;
+			gamma_distribution<long double>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 10:{
+			long double temp,temp2;
+			cin>>temp>>temp2;
+			weibull_distribution<long double>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 11:{
+			long double temp,temp2;
+			cin>>temp>>temp2;
+			extreme_value_distribution<long double>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 12:{
+			long double temp,temp2;
+			cin>>temp>>temp2;
+			normal_distribution<long double>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 13:{
+			long double temp,temp2;
+			cin>>temp>>temp2;
+			lognormal_distribution<long double>dis(temp,temp2);
+			__temp_output;
+			break;
+		}
+		case 14:{
+			long double temp;
+			cin>>temp;
+			chi_squared_distribution<long double>dis(temp);
+			__temp_output;
+			break;
+		}
+		case 15:{
+			long double temp;
+			cin>>temp;
+			cauchy_distribution<long double>dis(temp);
+			__temp_output;
+			break;
+		}
+		case 16:{
+			long double temp;
+			cin>>temp;
+			fisher_f_distribution<long double>dis(temp);
+			__temp_output;
+			break;
+		}
+		case 17:{
+			long double temp;
+			cin>>temp;
+			student_t_distribution<long double>dis(temp);
+			__temp_output;
+			break;
+		}
+		return;
+	}
+}
+#undef __temp_output

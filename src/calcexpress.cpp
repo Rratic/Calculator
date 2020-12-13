@@ -22,7 +22,7 @@ string expression::funList[EXP_FUN_NUM]={
 	"gamma(","trunc(","digamma(","versin(","vercosin(","coversin(",
 	"covercosin(","haversin(","havercosin(","hacoversin(","hacovercosin(","exsec(",
 	"excsc(","fade(","csch(","sech(","coth(","arccsch(",
-	"arcsech(","arccoth(","fma(",
+	"arcsech(","arccoth(","fma(","remainder(",
 	//zeta
 };
 int expression::funArgCnt[EXP_FUN_NUM]={
@@ -38,7 +38,7 @@ int expression::funArgCnt[EXP_FUN_NUM]={
     1,1,1,1,1,1,
     1,1,1,1,1,1,
     1,1,1,1,1,1,
-    1,1,3,
+    1,1,3,2,
 };
 int expression::preceMap[EXP_PTR_NUM][EXP_PTR_NUM]={
 //   f(  , +  -  *  /  (   )  #  %  ^
@@ -336,6 +336,7 @@ cvector expression::callFun(string &fun,vector<realn>&arg)
 			case 72:return acosh(1/arg[0]);
 			case 73:return atanh(1/arg[0]);
 			case 74:return fma(arg[0],arg[1],arg[2]);
+			case 75:return remainder(arg[0],arg[1]);
 			default:{
 				throw ProBug;
 			}

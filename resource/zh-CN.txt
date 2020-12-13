@@ -51,6 +51,7 @@
 0.7.2 更新2个函数，增加/max，/min
 0.7.3 重构数据系统和代码结构
 0.7.4 修复1个致命bug
+0.7.5 增加atm，kPa，增加一些特性，更新1个函数，增加/random
 </diary>
 <example>
 [样例1]
@@ -187,6 +188,8 @@ tan(45)
 最大值
 /min
 最小值
+/random
+生成随机数
 </help_command>
 <help_operator>
 +加法，需要同一量纲
@@ -224,6 +227,7 @@ rect矩形函数
 hypot斜边
 erf误差函数
 and,or布尔函数
+remainder带符号余数
 *部分调试函数和即将移除的函数未包括在内
 </help_func>
 <help_const>
@@ -278,23 +282,25 @@ rad(deg模式使用)
 degree(rad模式使用)
 Wb
 percent
+atm
+kPa
 </help_unit>
 <help_error>
-Unknown Type
-Unknown Word
-Grammer Err
-Math Err(Reason Unknown)
-Infinate
-Not Any Number
-Out Of Function Range
-Code Bug
-No Real Root
-No Root
-Unknown Unit Err
-Dim Operation Err
-Unknown Command
-Command Err
-No Jokes
+Unknown Type 未知类型
+Unknown Word 未知词
+Grammer Error 语法错误
+Math Error(Reason Unknown) 数学错误
+Infinate Result 无穷大
+Not Any Number Result 无意义
+Out Of Function Range 超出函数定义域
+Code Bug 程序错误
+No Real Root 无实根
+No Root 无根
+Unknown Unit Error 未知单位
+Dim Operation Error 量纲操作错误
+Unknown Command 未知指令
+Command Error 指令错误
+No Jokes 这不好笑！
 </help_error>
 <define_menu>
 选择：
@@ -314,7 +320,7 @@ No Jokes
 │           │
 │     o     │
 │           │
-│          1│
+│         一│
 └───────────┘
 </dice1>
 <dice2>
@@ -323,7 +329,7 @@ No Jokes
 │   o       │
 │           │
 │       o   │
-│          2│
+│         二│
 └───────────┘
 </dice2>
 <dice3>
@@ -332,7 +338,7 @@ No Jokes
 │   o       │
 │     o     │
 │       o   │
-│          3│
+│         三│
 └───────────┘
 </dice3>
 <dice4>
@@ -341,7 +347,7 @@ No Jokes
 │   o   o   │
 │           │
 │   o   o   │
-│          4│
+│         四│
 └───────────┘
 </dice4>
 <dice5>
@@ -350,7 +356,7 @@ No Jokes
 │   o   o   │
 │     o     │
 │   o   o   │
-│          5│
+│         五│
 └───────────┘
 </dice5>
 <dice6>
@@ -359,6 +365,26 @@ No Jokes
 │   o   o   │
 │   o   o   │
 │   o   o   │
-│          6│
+│         六│
 └───────────┘
 </dice6>
+<random_menu>
+首先选择类型，然后输入你需要的数个数，最后输入左/右端点等
+1=产生在一个范围上均匀分布的整数值
+2=产生在一个范围上均匀分布的实数值
+3=产生伯努利分布上的布尔值
+4=产生二项分布上的整数值
+5=产生负二项分布上的整数值
+6=产生几何分布上的整数值
+7=产生泊松分布上的整数值
+8=产生指数分布上的实数值
+9=产生 Γ 分布上的实数值
+10=产生威布尔分布上的实数值
+11=产生极值分布上的实数值
+12=产生标准正态（高斯）分布上的实数值
+13=产生对数正态分布上的实数值
+14=产生 χ2 分布上的实数值
+15=产生柯西分布上的实数值
+16=产生费舍尔 F 分布上的实数值
+17=产生学生 t 分布上的实数值
+</random_menu>

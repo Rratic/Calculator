@@ -9,7 +9,7 @@
 #include<algorithm>
 #include<cstdio>
 #define EXP_PTR_NUM 11
-#define EXP_FUN_NUM 75
+#define EXP_FUN_NUM 76
 extern random_device thisseed;
 extern mt19937 generatedseed;
 extern string order;

@@ -4,7 +4,7 @@
 int main(int argc,char *argv[])
 {
 	system("title Calculator");
-	cls;//to activate the \033 system(?) and clear screen if "title"isn't available
+	cls();//to activate the \033 system(?) and clear screen if "title"isn't available
 	if(!thisset.loadfrom(*argv)){
 		if(!make_used_file(*argv)){
 			cerr<<"Default language file unfound:"<<used_file<<"\nInput the file name\n";
@@ -12,13 +12,13 @@ int main(int argc,char *argv[])
 			if(!loadfile(order))cout<<"Failed to find file:(\nTrying to load without files...\n";
 		}
 		thisset.this_used_file=used_file;
-		CALCinfo();
 	}
 	setcolor(thisset.calc_color);
+	CALCinfo();
     unsigned short count=0;
 	for(size_t turner=0;true;){
 		place_get_order:if(count==3){
-			cls;
+			cls();
 			count=0;
 		}
 		if(thisset.cdebug)cout<<"\n<TURN"<<turner<<">";

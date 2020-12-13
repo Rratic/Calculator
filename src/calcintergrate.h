@@ -5,4 +5,5 @@ extern timer ttime;
 void CALCinfo();
 bool doorder();
 void docommand(string file);
+void makerandom();
 #endif
