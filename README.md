@@ -16,7 +16,9 @@ I'm trying to make it more portable.
 
 ## Feature
 
-Pure C++
+### Code
+
+- Pure C++
 
 - Using C++11 standard
 
@@ -26,8 +28,36 @@ Pure C++
 
 - Using mt19937
 
+### Progress
+
+- Press Enter three times and it will clear the window
+
+- Colourful words
+
+- Using utf-8 I/O
+
 ## Language
 
 - en-uk
 
 - zh-CN
+
+## Useful Commands(You can try)
+
+- /random,/dice
+
+- /help
+
+- /exit
+
+- /debug,/disdebug
+
+- /information
+
+- /example
+
+- /save
+
+- /mr,/m+,/m-,/ms
+
+- /color

@@ -86,30 +86,12 @@ cvector expression::calculate(string &ptr,vector<cvector>&arg)
 {
 	try{
     	switch(getPtrIndex(ptr)){
-        	case 2:{
-        		arg[0].plus(arg[1]);
-				break;
-			}
-        	case 3:{
-        		arg[0].minus(arg[1]);
-				break;
-			}
-        	case 4:{
-        		arg[0].multipy(arg[1]);
-				break;
-			}
-        	case 5:{
-        		arg[0].divide(arg[1]);
-				break;
-			}
-			case 9:{
-				arg[0].mod(arg[1]);
-				break;
-			}
-			case 10:{
-				arg[0].power(arg[1]);
-				break;
-			}
+			case 2:return arg[0]+arg[1];
+			case 3:return arg[0]-arg[1];
+			case 4:return arg[0]*arg[1];
+			case 5:return arg[0]/arg[1];
+			case 9:return arg[0]%arg[1];
+			case 10:return arg[0]^arg[1];
     	}
     	return arg[0];
 	}
@@ -357,7 +339,8 @@ void expression::readToken()
         return;
     }
     int pos_t=pos;
-    char ch=pression[pos_t++];
+    char ch=pression[pos_t];
+    ++pos_t; 
     char ch_n=pos_t<length?pression[pos_t]:0;
     if(isdigit(ch)||(ch=='-'&&isdigit(ch_n)&&tkType!=TKT_NUMBER)){//number 
         if(ch=='-')++pos_t;
@@ -448,7 +431,7 @@ void expression::getVal(cvector &res)
                         if(!getArg(opnd,arg,argCnt))throw UnknownWord;
                         vector<realn>arg2;
                         for(int i=0;i<arg.size();i++){
-                        	if(!arg[i].ispure)throw DimErr;
+                        	if(!arg[i].ispure())throw DimErr;
                         	arg2.push_back(arg[i].data());	
 						}
                         res=callFun(ptr,arg2);

@@ -1,6 +1,4 @@
 #include"calcintergrate.h"
-// /median,/range,/roots
-//conj,isnan,isinf future
 int main(int argc,char *argv[])
 {
 	system("title Calculator");
@@ -9,7 +7,7 @@ int main(int argc,char *argv[])
 		if(!make_used_file(*argv)){
 			cerr<<"Default language file unfound:"<<used_file<<"\nInput the file name\n";
 			getline(cin,order);
-			if(!loadfile(order))cout<<"Failed to find file:(\nTrying to load without files...\n";
+			if(!loadfile(order))cerr<<"Failed to find file:(\nTrying to load without files...\n";
 		}
 		thisset.this_used_file=used_file;
 	}
@@ -17,9 +15,11 @@ int main(int argc,char *argv[])
 	CALCinfo();
     unsigned short count=0;
 	for(size_t turner=0;true;){
-		place_get_order:if(count==3){
-			cls();
-			count=0;
+		place_get_order:{
+			if(count==3){
+				cls();
+				count=0;
+			}
 		}
 		if(thisset.cdebug)cout<<"\n<TURN"<<turner<<">";
 		turner++;
@@ -29,7 +29,7 @@ int main(int argc,char *argv[])
 		cin.clear();
 		cin.sync();
 		getline(cin,order);
-		cvector res;
+		cvector res(0);
 	    try{
 			replace_all(order," ","");
 			if(order==""){

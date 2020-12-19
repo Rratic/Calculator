@@ -36,7 +36,7 @@ bool doorder(){
     replace_all(order,"_second_",to_string(ttime.newtime->tm_sec));
     uniform_real_distribution<>dis(0,1);
     replace_all(order,"_random_",to_string(dis(generatedseed)));
-	replace_all(order,"ans",lastans.to_string());
+	//replace_all(order,"ans",lastans.to_string());//will be fixed later 
     //units
     for(int i=0;i<UNIT_NUM;i++){
     	while(1){
@@ -149,8 +149,8 @@ void docommand(string file){
 			makerandom();
 		}
 		else if(order=="/mr")lastans=saved;
-		else if(order=="/m+")saved.plus(lastans);
-		else if(order=="/m-")saved.minus(lastans);
+		else if(order=="/m+")saved=saved+lastans;
+		else if(order=="/m-")saved=saved-lastans;
 		else if(order=="/ms")saved=lastans;
 		else if(order=="/date")ttime.showdate();
 		else if(order=="/rad")thisset.tri_type=TriRAD; 

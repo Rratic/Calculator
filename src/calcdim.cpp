@@ -30,178 +30,123 @@ string PutReal(realn num,unsigned short base){
 }
 cvector::cvector(){
 	real=0;
-	imag=0;
-	isonlyr=true;
-	ispure=true;
 	for(int i=1;i<DIMENSION_NUM;++i)si[i]=0;
 }
 cvector::cvector(realn re){
 	real=re;
-	imag=0;
-	isonlyr=true;
-	ispure=true;
 	for(int i=1;i<DIMENSION_NUM;++i)si[i]=0;
 }
 cvector::cvector(realn re,short type){
 	real=re;
-	imag=0;
-	isonlyr=true;
 	for(int i=1;i<DIMENSION_NUM;++i)si[i]=0;
-	if(type==0)ispure=true;
-	else{
-		si[type]=1;
-		ispure=false;
-	}
-}
-cvector::cvector(realn re,realn im,short type){
-	real=re;
-	imag=im;
-	isonlyr=false;
-	for(int i=1;i<DIMENSION_NUM;++i)si[i]=0;
-	if(type==0)ispure=true;
-	else{
-		si[type]=1;
-		ispure=false;	
-	}
 }
 cvector::cvector(realn re,short di[]){
 	real=re;
-	imag=0; 
-	isonlyr=true;
 	for(int i=1;i<DIMENSION_NUM;++i)si[i]=di[i];
-	ispure=false;
-}
-cvector::cvector(realn re,realn im,short di[]){
-	real=re;
-	imag=im;
-	isonlyr=false;
-	for(int i=1;i<DIMENSION_NUM;++i)si[i]=di[i];
-	ispure=false;
 }
 void cvector::output(){
-	if(isonlyr)cout<<real;
-	else cout<<"("<<real<<","<<imag<<")";
-	if(!ispure){
-		bool flag=false;
-		for(int i=1;i<DIMENSION_NUM;++i){
-			if(si[i]==0)continue;
-			if(flag)cout<<"*";
-			flag=true;
-			cout<<unit[i];
-			if(si[i]!=1)cout<<"^"<<si[i];
-		}
+	cout<<real;
+	bool flag=false;
+	for(int i=1;i<DIMENSION_NUM;++i){
+		if(si[i]==0)continue;
+		if(flag)cout<<"*";
+		flag=true;
+		cout<<unit[i];
+		if(si[i]!=1)cout<<"^"<<si[i];
 	}
 }
 void cvector::output(unsigned short base){
-	if(isonlyr)cout<<PutReal(real,base);
-	else cout<<"("<<PutReal(real,base)<<","<<PutReal(imag,base)<<")";
-	if(!ispure){
-		bool flag=false;
-		for(int i=1;i<DIMENSION_NUM;++i){
-			if(si[i]==0)continue;
-			if(flag)cout<<"*";
-			flag=true;
-			cout<<unit[i];
-			if(si[i]!=1)cout<<"^"<<si[i];
-		}
+	cout<<PutReal(real,base);
+	bool flag=false;
+	for(int i=1;i<DIMENSION_NUM;++i){
+		if(si[i]==0)continue;
+		if(flag)cout<<"*";
+		flag=true;
+		cout<<unit[i];
+		if(si[i]!=1)cout<<"^"<<si[i];
 	}
 }
 void cvector::output_info(){
-	cout<<"\nPart 1:"<<real<<endl;
-	if(isonlyr)cout<<"No Part 2"<<endl;
-	else cout<<"Part 2:"<<imag;
-	if(ispure)cout<<endl<<"Pure Number"<<endl;
-	else{
-		cout<<"Dimension According To SI:"<<endl;
-		for(int i=1;i<DIMENSION_NUM;++i){
-			cout<<"Dimension"<<i<<":="<<si[i]<<endl;
-		}
-	}
-}
-void cvector::plus(cvector right){
-	try{
-		if(ispure!=right.ispure)throw DimErr;
-		for(int i=1;i<DIMENSION_NUM;++i)if(si[i]!=right.si[i])throw DimErr;
-	}
-	catch(ErrType i){
-		throw i;
-	}
-	real+=right.real;
-	imag+=right.imag;
-	ispure&=right.ispure;
-	isonlyr&=right.isonlyr;
-}
-void cvector::minus(cvector right){
-	try{
-		if(ispure!=right.ispure)throw DimErr;
-		for(int i=1;i<DIMENSION_NUM;++i)if(si[i]!=right.si[i])throw DimErr;
-	}
-	catch(ErrType i){
-		throw i;
-	}
-	real-=right.real;
-	imag-=right.imag;
-	ispure&=right.ispure;
-	isonlyr&=right.isonlyr;
-}
-void cvector::multipy(cvector right){
-	if(!ispure||!right.ispure)for(int i=1;i<DIMENSION_NUM;++i)si[i]+=right.si[i];
-	real=real*right.real-imag*right.imag;
-	imag=imag*right.real+real*right.imag;
-	ispure&=right.ispure;
-	isonlyr&=right.isonlyr;
-}
-void cvector::divide(cvector right){
-	try{
-		if(right.real==0)throw Nan;
-	}
-	catch(ErrType i){
-		throw i;
-	}
-	if(!ispure||!right.ispure)for(int i=1;i<DIMENSION_NUM;++i)si[i]-=right.si[i];
-	real/=right.real;
-	//imag+=right.imag;
-	ispure&=right.ispure;
-	isonlyr&=right.isonlyr;
-}
-void cvector::mod(cvector right){
-	try{
-		if(ispure!=right.ispure)throw DimErr;
-		for(int i=1;i<DIMENSION_NUM;++i)if(si[i]!=right.si[i])throw DimErr;
-	}
-	catch(ErrType i){
-		throw i;
-	}
-	real=fmod(real,right.real);
-	isonlyr&=right.isonlyr;
-}
-void cvector::power(cvector right){
-	try{
-		if(!right.ispure)throw DimErr;
-	}
-	catch(ErrType i){
-		throw i;
-	}
-	for(int i=1;i<DIMENSION_NUM;++i)si[i]*=right.real;
-	real=pow(real,right.real);
-	//imag
-	isonlyr&=right.isonlyr;
+	cout<<"\nReal Number "<<real<<"\nDimension According To SI:\n";
+	for(int i=1;i<DIMENSION_NUM;++i)cout<<"Dimension ID "<<i<<":="<<si[i]<<endl;
 }
 realn cvector::data(){
-	return real; 
-}
-string cvector::to_string(){
-	return "createv("+std::to_string(real)+")";
+	return real;
 }
 bool cvector::isinf(){
-	if(std::isinf(real)||std::isinf(imag))return true;
+	if(std::isinf(real))return true;
 	return false;
 }
 bool cvector::isnan(){
-	if(std::isnan(real)||std::isnan(imag))return true;
+	if(std::isnan(real))return true;
 	return false;
 }
-//
+bool cvector::ispure(){
+	for(int i=1;i<DIMENSION_NUM;++i)if(si[i]!=0)return false;
+	return true;
+}
+cvector operator+(cvector left,cvector right){
+	cvector ans(left.real+right.real);
+	try{
+		for(int i=1;i<DIMENSION_NUM;++i){
+			if(left.si[i]!=right.si[i])throw DimErr;
+			ans.si[i]=left.si[i];
+		}
+	}
+	catch(ErrType i){
+		throw i;
+	}
+	return ans;
+}
+cvector operator-(cvector left,cvector right){
+	cvector ans(left.real-right.real);
+	try{
+		for(int i=1;i<DIMENSION_NUM;++i){
+			if(left.si[i]!=right.si[i])throw DimErr;
+			ans.si[i]=left.si[i];
+		}
+	}
+	catch(ErrType i){
+		throw i;
+	}
+	return ans;
+}
+cvector operator*(cvector left,cvector right){
+	cvector ans(left.real*right.real);
+	for(int i=1;i<DIMENSION_NUM;++i)ans.si[i]=left.si[i]+right.si[i];
+	return ans; 
+}
+cvector operator/(cvector left,cvector right){
+	cvector ans(left.real/right.real);
+	for(int i=1;i<DIMENSION_NUM;++i)ans.si[i]=left.si[i]-right.si[i];
+	return ans;
+}
+cvector operator%(cvector left,cvector right){
+	cvector ans(fmod(left.real,right.real));
+	try{
+		for(int i=1;i<DIMENSION_NUM;++i){
+			if(left.si[i]!=right.si[i])throw DimErr;
+			ans.si[i]=left.si[i];
+		}
+	}
+	catch(ErrType i){
+		throw i;
+	}
+	return ans;
+}
+cvector operator^(cvector left,cvector right){
+	cvector ans(pow(left.real,right.real));
+	try{
+		for(int i=1;i<DIMENSION_NUM;++i){
+			if(right.si[i]!=0)throw DimErr;
+			ans.si[i]=left.si[i]*right.real;
+		}
+	}
+	catch(ErrType i){
+		throw i;
+	}
+	return ans;
+}
 string cmessages[]={
 	"NULL","Unknown Type",
 	"Unknown Word","Grammer Error",

@@ -14,13 +14,11 @@ setting::setting(){
 }
 bool setting::loadfrom(string file){
 	file=file.substr(0,file.find_last_of('\\'));
-	file=file.substr(0,file.find_last_of('\\'));
 	ifstream fin;
 	fin.open(file+"\\save\\setting.data",ios::in);
 	if(!fin.is_open())return false;
 	string temp;
-	while(true){
-		if(!getline(fin,temp))break;
+	while(fin>>temp){
 		if(fin.fail())return false;
 		if(temp=="this_used_file"){
 			fin>>this_used_file;
@@ -41,20 +39,19 @@ bool setting::loadfrom(string file){
 }
 bool setting::createsave(string file){
 	file=file.substr(0,file.find_last_of('\\'));
-	file=file.substr(0,file.find_last_of('\\'));
 	ofstream fout;
 	fout.open(file+"\\save\\setting.data",ios::out);
 	if(!fout.is_open())return false;
-	fout<<"\nthis_used_file"<<endl<<used_file;
-	fout<<"\ncdebug"<<endl<<cdebug;
-	fout<<"\ncalc_base"<<endl<<calc_base;
-	fout<<"\ntri_type"<<endl<<tri_type;
-	fout<<"\ncalc_color"<<endl<<calc_color;
-	fout<<"\nvariable_x"<<endl<<variable_x;
-	fout<<"\n_earth_"<<endl<<__earth__;
-	fout<<"\n_pi_"<<endl<<__pi__;
-	fout<<"\n_e_"<<endl<<__e__;
-	fout<<"\n_phi_"<<endl<<__phi__;
+	fout<<"\nthis_used_file "<<used_file;
+	fout<<"\ncdebug "<<cdebug;
+	fout<<"\ncalc_base "<<calc_base;
+	fout<<"\ntri_type "<<tri_type;
+	fout<<"\ncalc_color "<<calc_color;
+	fout<<"\nvariable_x "<<variable_x;
+	fout<<"\n_earth_ "<<__earth__;
+	fout<<"\n_pi_ "<<__pi__;
+	fout<<"\n_e_ "<<__e__;
+	fout<<"\n_phi_ "<<__phi__;
 	fout.close();
 	return true;
 }

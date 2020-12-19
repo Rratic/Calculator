@@ -52,6 +52,7 @@ You can use/debug to start debugging
 0.7.3 rewriting random system and code structure
 0.7.4 fixing a fatal bug
 0.7.5 adding atm,kPa and some features,updating 1func,adding /random
+0.8.0 adding some of details,simplfied the code
 </diary>
 <example>
 [sample1]
@@ -362,7 +363,7 @@ choose:
 ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
 </dice6>
 <random_menu>
-Choose the type first,then input the number of numbers you need,and input the left/right bounds,etc in the end.
+First select the type, then enter the number you need, and finally enter left/right endpoints or other parameters
 1=uniform_int_distribution
 2=uniform_real_distribution
 3=bernoulli_distribution

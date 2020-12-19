@@ -29,31 +29,27 @@ enum ErrType{
 /*Basic Vector*/
 class cvector{
 	private:
-		realn real,imag;
-		bool isonlyr;//not imag!=0or something,only shows whether it is "polluted"...
-		short si[DIMENSION_NUM];
 		bool simple_unit_output();
 	public:
-		bool ispure;//makes it quicker to calc
+		realn real;
+		short si[DIMENSION_NUM];
 		cvector();
 		cvector(realn re);
 		cvector(realn re,short type);
-		cvector(realn re,realn im,short type);
 		cvector(realn re,short di[]);
-		cvector(realn re,realn im,short di[]);
 		void output();
 		void output(unsigned short base);
 		void output_info();
-		void plus(cvector right);
-		void minus(cvector right);
-		void multipy(cvector right);
-		void divide(cvector right);
-		void mod(cvector right);
-		void power(cvector right);
 		realn data();
-		string to_string();
 		bool isinf();
 		bool isnan();
+		bool ispure();
+		friend cvector operator+(cvector left,cvector right);
+		friend cvector operator-(cvector left,cvector right);
+		friend cvector operator*(cvector left,cvector right);
+		friend cvector operator/(cvector left,cvector right);
+		friend cvector operator%(cvector left,cvector right);
+		friend cvector operator^(cvector left,cvector right);
 };
 extern string cmessages[];
 #define UNIT_NUM 47
