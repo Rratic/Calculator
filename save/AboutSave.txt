@@ -1,4 +1,4 @@
 This folder includes the calculator's saving data.(setting.data)
 DO NOT change the file yourself unless you SURELY know what you are doing.
-±¾ÎÄ¼ş¼Ğ°üº¬¼ÆËãÆ÷µÄ±£´æÊı¾İ¡£
-³ı·ÇÄãÖªµÀÄãÔÚ×öÊ²Ã´£¬Çë²»ÒªËæÒâ¸Ä±äÎÄ¼ş£¡£¡£¡
+æœ¬æ–‡ä»¶å¤¹åŒ…å«è®¡ç®—å™¨çš„ä¿å­˜æ•°æ®ã€‚
+é™¤éä½ çŸ¥é“ä½ åœ¨åšä»€ä¹ˆï¼Œè¯·ä¸è¦éšæ„æ”¹å˜æ–‡ä»¶ï¼ï¼ï¼

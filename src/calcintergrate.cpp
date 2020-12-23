@@ -13,32 +13,36 @@ bool doorder(){
 	if(order.find("#")!=order.npos)throw UnknownWord;
 	replace_all(order,"history",lastorder);
 	//()[]{}
-    for(int i=0;i<order.length();i++){
+    for(int i=0;i<order.length();++i){
     	if(order[i]=='['||order[i]=='{')order[i]='(';
     	if(order[i]==']'||order[i]=='}')order[i]=')';
 	}
+	//()
+	replace_all(order,"()","");//sin()->sin,but it's also an error,right?
+	//jokes
+	if(order=="")throw JokeErr;
 	//save order
     lastorder=order;
 	//get newtime
     ttime.reset();
-    replace_all(order,"¡Á","*");
-    replace_all(order,"¡Â","/");
-    replace_all(order,"¡Ì","sqrt");
+    replace_all(order,"ï¿½ï¿½","*");
+    replace_all(order,"ï¿½ï¿½","/");
+    replace_all(order,"ï¿½ï¿½","sqrt");
 	replace_all(order,"_earth_",thisset.__earth__);
 	replace_all(order,"_X_",thisset.variable_x);
     replace_all(order,"_pi_",thisset.__pi__);
-    replace_all(order,"¦Ð",thisset.__pi__);
+    replace_all(order,"ï¿½ï¿½",thisset.__pi__);
     replace_all(order,"_e_",thisset.__e__);
     replace_all(order,"_phi_",thisset.__phi__);
-    replace_all(order,"¦Õ",thisset.__phi__);
+    replace_all(order,"ï¿½ï¿½",thisset.__phi__);
     replace_all(order,"_hour_",to_string(ttime.newtime->tm_hour));
     replace_all(order,"_minute_",to_string(ttime.newtime->tm_min));
     replace_all(order,"_second_",to_string(ttime.newtime->tm_sec));
     uniform_real_distribution<>dis(0,1);
     replace_all(order,"_random_",to_string(dis(generatedseed)));
-	//replace_all(order,"ans",lastans.to_string());//will be fixed later 
+	replace_all(order,"ans",to_string(lastans.real));
     //units
-    for(int i=0;i<UNIT_NUM;i++){
+    for(int i=0;i<UNIT_NUM;++i){
     	while(1){
     		int len=findalpha(order,unit_name[i]);
     		if(len==-1)break;
@@ -84,8 +88,8 @@ void docommand(string file){
 			string temp;
 			cin>>temp;
 			if(temp=="y"||temp=="Y"){
-				if(thisset.createsave(file))cout<<"Saved Successfully:)";
-				else cout<<"Failed to save setting:(";
+				if(thisset.createsave(file))cout<<"Setting saved successfully :)\n";
+				else cout<<"Failed to save setting :(\n";
 				system("pause");
 			}
 			exit(0);
@@ -98,10 +102,6 @@ void docommand(string file){
 		else if(order=="/clear"){
 			cls;
 			ttime.showtime();
-		}
-		else if(order=="/example"){
-			cout<<notice_color;
-			readnotes("example");
 		}
 		else if(order=="/debug"){
 			thisset.cdebug=true;
@@ -131,7 +131,7 @@ void docommand(string file){
 			if(temp=="3")getline(cin,thisset.__e__);
 			if(temp=="4")getline(cin,thisset.__phi__);
 		}
-		else if(order=="/color"){
+		else if(order=="/color"||order=="/colour"){
 			readnotes("color_menu");
 			unsigned short temp;
 			cin>>temp;

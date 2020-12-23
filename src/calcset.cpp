@@ -4,7 +4,7 @@ setting::setting(){
 	this_used_file=used_file;
 	cdebug=false;
 	calc_base=10;
-	tri_type=TriRAD;
+	tri_type=TriDEG;//it is found that most people are used to degree mode
 	calc_color=1;
 	variable_x="0";
 	__earth__="9.8N";

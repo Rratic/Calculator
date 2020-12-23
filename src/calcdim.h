@@ -18,7 +18,7 @@ enum DimType{
 /*ErrType*/
 enum ErrType{
 	Nothing,UnknownType,
-	UnknownWord,GrammerErr,
+	UnknownWord,GrammarErr,
 	MathErr,Inf,
 	Nan,OutOfRange,
 	ProBug,NoRealRoot,

@@ -59,7 +59,7 @@ expression::expression(string &exp)
     pression=exp+"#";
     token="";
     pos=0;
-    length=1+exp.length(); 
+    length=1+exp.length();
 }
 int expression::getPtrIndex(const string &ptr)
 {
@@ -396,19 +396,23 @@ void expression::getVal(cvector &res)
     readToken();
     while(tkType!=TKT_ENDSIGN||!optr.empty()){
         if(tkType==TKT_UNKNOWN){
-            throw UnknownType;//unknown 
+            throw UnknownType;//unknown
         }
         if(tkType==TKT_NUMBER){
             opnd.push(cvector(atof(token.c_str())));
             readToken();
         }
 		else{
+			//if(token=="")throw GrammarErr;
+			if(thisset.cdebug)cout<<"Token:"<<token<<'\n';
             int comRes=comaprePrece(optr.top(),token);
             switch(comRes){
                 case -1:
+                {
                     optr.push(token);
                     readToken();
                     break;
+                }
                 case 1:
                 {
                     string ptr=optr.top();
@@ -441,9 +445,12 @@ void expression::getVal(cvector &res)
                     break;
                 }
                 case 0:
+                {
                     optr.pop();
                     readToken();
                     break;
+                }
+                default:throw ProBug;
             }
         }
     }

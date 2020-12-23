@@ -1,258 +1,202 @@
 <menu_title>
-¼ÆËãÆ÷[»ùÓÚ´¿C++]
+è®¡ç®—å™¨[åŸºäºŽçº¯C++]
 </menu_title>
 <menu_info>
-ÓÐÎÊÌâ¸æËßÎÒ
-ÊäÈëÕý³£±í´ïÊ½
-ÀýÈç£ºsin(30degree)
-Äã¿ÉÒÔÓÃ/help²é¿´°ïÖú
-Äã¿ÉÒÔÓÃ/example²é¿´µäÐÍÀý×Ó
-Äã¿ÉÒÔÓÃ/diary²é¿´¸üÐÂÈÕÖ¾
-Äã¿ÉÒÔÓÃ/debugÀ´µ÷ÊÔ³ÌÐò
+æœ‰é—®é¢˜å‘Šè¯‰æˆ‘
+è¾“å…¥æ­£å¸¸è¡¨è¾¾å¼
+ä¾‹å¦‚ï¼šsin(30)
+ä½ å¯ä»¥ç”¨/helpæŸ¥çœ‹å¸®åŠ©
+ä½ å¯ä»¥ç”¨/diaryæŸ¥çœ‹æ›´æ–°æ—¥å¿—
+ä½ å¯ä»¥ç”¨/debugæ¥è°ƒè¯•ç¨‹åº
 </menu_info>
 <diary>
-0.1.0 ¸ÐÐ»https://blog.csdn.net/luoluozlb/article/details/78793252
-0.1.1 ËùÓÐÀ¨ºÅÖ§³Ö
-0.1.2 ´óÐ¡Ð´×ª»¯
-0.1.3 ansÖ§³ÖºÍ½á¹¹½¨Á¢
-0.1.4 ³£Á¿_pi_ºÍ_e_ÇåÆÁ£¬Ê±¼äÏÔÊ¾
-0.1.5 ¸üÐÂ12º¯Êý
-0.2.0 ÖØ¹¹Òì³£´¦ÀíÏµÍ³£¬ÐÞ¸´8¸öbug
-0.2.1 ¸üÐÂ°ïÖú£¬4º¯Êý
-0.2.2 ÐÞ¸´Ò»¸öÖÂÃübug£¬¸üÐÂ4º¯Êý£¬history
-0.2.3 ¶à²Ê»¯£¬¸üÐÂ2¸öº¯Êý£¬ÐÞ¸´2¸öbug
-0.2.4 ¸üÐÂexample£¬¸üÐÂ3º¯Êý
-0.2.5 ±äÁ¿_hour_,_minute_,_second_Ö§³Ö£¬Ôö¼Ódebug£¬disdebug£¬¸üÐÂ1¸öº¯Êý
-0.2.6 ¹¦ÄÜ_random_£¬¸üÐÂ4¸öº¯Êý
-0.2.7 Ôö¼Ó2¸öÒì³£´¦ÀíÐÅÏ¢
-0.3.0 Ôö¼Ó2¸öº¯Êý£¬ÖØ¹¹Õû¸öÏµÍ³£¬Ôö¼Óµ¥Î»×ª»¯£¬Á¿¸Ù·ÖÎö
-0.3.1 Ôö¼ÓÐÂµÄµ¥Î»ºÍ²Êµ°
-0.3.2 Ôö¼Ó´óÁ¿µ¥Î»£¬³£Á¿_earth_
-0.3.3 Ôö¼ÓL,mL,Pa,mmHg,cmHg£¬ÐÞ¸´Èô¸Ébug
-0.4.0 ÖØ¹¹¶ÁÈ¡ÏµÍ³£¬Ôö¼Óinch,nmi,eV,V,Omega,C,Hz,day,lightsecond,T,week,mile,F
-0.4.1 ²¿·Ö·­Òë£¬Ôö¼Ó°ïÖúµÄÏ¸½Ú£¬Ôö¼ÓÖ¸Áî/timer,/echo£¬Ôö¼Órad,degree
-0.4.2 Ê¹ÓÃÎÄ¼þ¶ÁÈ¡£¬²¿·Ö·­Òë£¬ÖØ¹¹Ìæ»»ÏµÍ³
-0.4.3 ¦Ð£¬¦Õ£¬_phi_Ö§³Ö£¬Ôö¼Ó´óÁ¿ÎÄ±¾£¬/define
-0.4.4 ÐÞ¸´Èô¸Ébug£¬ÓÅ»¯´úÂë£¬Ôö¼Ó/logo
-0.4.5 ¸üÐÂ3¸öº¯Êý£¬Ìí²¹/define£¬Ôö¼Ó/color£¬/dice£¬Ôö¼ÓWb
-0.4.6 ¸üÐÂ10¸öº¯Êý£¬ÖØ¹¹Ëæ»úËã·¨ÎªÃ·É­Ðý×ªËã·¨£¨MT19337£©£¬Ôö¼Ó/mr£¬/m+£¬/m-£¬/ms£¬ÐÞ¸´Ò»¸öÖÂÃübug
-0.4.7 ¸üÐÂ4¸öº¯Êý£¬Ôö¼Ó/date£¬/lang£¬percent
-0.4.8 ¸üÐÂ3¸öº¯Êý£¬Ôö¼Ó/bin£¬/oct£¬/dec£¬/hex
-0.4.9 ÐÞ¸´Èô¸ÉÖÂÃübug
-0.4.10 ¸üÐÂ1¸öº¯Êý£¬double->long double£¬ÐÞ¸´1¸öbug
-0.5.0 ×éÖ¯½á¹¹£¬ÐÞ¸´2¸öbug
-0.5.1 Ôö¼Ó/sort
-0.5.2 Ìí²¹/base£¬Ôö¼Ó/sum£¬/average£¬É¾³ýÈô¸Éº¯Êý£¨µ±Ç°ÃûÎªdeleted£©
-0.5.3 ÐÞ¸´1¸öbug£¬¸ü¸ÄÒ»Ð©Ï¸½Ú
-0.6.0 Ôö¼Ó/rad,/deg,/grad
-0.6.1 ¸üÐÂ2¸öº¯Êý
-0.7.0 ÖØÖÃ±£´æÏµÍ³£¬Ôö¼Ó/save
-0.7.1 ¸üÐÂ2¸öº¯Êý
-0.7.2 ¸üÐÂ2¸öº¯Êý£¬Ôö¼Ó/max£¬/min
-0.7.3 ÖØ¹¹Êý¾ÝÏµÍ³ºÍ´úÂë½á¹¹
-0.7.4 ÐÞ¸´1¸öÖÂÃübug
-0.7.5 Ôö¼Óatm£¬kPa£¬Ôö¼ÓÒ»Ð©ÌØÐÔ£¬¸üÐÂ1¸öº¯Êý£¬Ôö¼Ó/random
-0.8.0 Ôö¼ÓÒ»Ð©Ï¸½Ú£¬¼ò»¯´úÂë
+0.1.0 æ„Ÿè°¢https://blog.csdn.net/luoluozlb/article/details/78793252
+0.1.1 æ‰€æœ‰æ‹¬å·æ”¯æŒ
+0.1.2 å¤§å°å†™è½¬åŒ–
+0.1.3 ansæ”¯æŒå’Œç»“æž„å»ºç«‹
+0.1.4 å¸¸é‡_pi_å’Œ_e_æ¸…å±ï¼Œæ—¶é—´æ˜¾ç¤º
+0.1.5 æ›´æ–°12å‡½æ•°
+0.2.0 é‡æž„å¼‚å¸¸å¤„ç†ç³»ç»Ÿï¼Œä¿®å¤8ä¸ªbug
+0.2.1 æ›´æ–°å¸®åŠ©ï¼Œ4å‡½æ•°
+0.2.2 ä¿®å¤ä¸€ä¸ªè‡´å‘½bugï¼Œæ›´æ–°4å‡½æ•°ï¼Œhistory
+0.2.3 å¤šå½©åŒ–ï¼Œæ›´æ–°2ä¸ªå‡½æ•°ï¼Œä¿®å¤2ä¸ªbug
+0.2.4 æ›´æ–°exampleï¼Œæ›´æ–°3å‡½æ•°
+0.2.5 å˜é‡_hour_,_minute_,_second_æ”¯æŒï¼Œå¢žåŠ debugï¼Œdisdebugï¼Œæ›´æ–°1ä¸ªå‡½æ•°
+0.2.6 åŠŸèƒ½_random_ï¼Œæ›´æ–°4ä¸ªå‡½æ•°
+0.2.7 å¢žåŠ 2ä¸ªå¼‚å¸¸å¤„ç†ä¿¡æ¯
+0.3.0 å¢žåŠ 2ä¸ªå‡½æ•°ï¼Œé‡æž„æ•´ä¸ªç³»ç»Ÿï¼Œå¢žåŠ å•ä½è½¬åŒ–ï¼Œé‡çº²åˆ†æž
+0.3.1 å¢žåŠ æ–°çš„å•ä½å’Œå½©è›‹
+0.3.2 å¢žåŠ å¤§é‡å•ä½ï¼Œå¸¸é‡_earth_
+0.3.3 å¢žåŠ L,mL,Pa,mmHg,cmHgï¼Œä¿®å¤è‹¥å¹²bug
+0.4.0 é‡æž„è¯»å–ç³»ç»Ÿï¼Œå¢žåŠ inch,nmi,eV,V,Omega,C,Hz,day,lightsecond,T,week,mile,F
+0.4.1 éƒ¨åˆ†ç¿»è¯‘ï¼Œå¢žåŠ å¸®åŠ©çš„ç»†èŠ‚ï¼Œå¢žåŠ æŒ‡ä»¤/time,/echoï¼Œå¢žåŠ rad,degree
+0.4.2 ä½¿ç”¨æ–‡ä»¶è¯»å–ï¼Œéƒ¨åˆ†ç¿»è¯‘ï¼Œé‡æž„æ›¿æ¢ç³»ç»Ÿ
+0.4.3 Ï€ï¼ŒÏ†ï¼Œ_phi_æ”¯æŒï¼Œå¢žåŠ å¤§é‡æ–‡æœ¬ï¼Œ/define
+0.4.4 ä¿®å¤è‹¥å¹²bugï¼Œä¼˜åŒ–ä»£ç ï¼Œå¢žåŠ /logo
+0.4.5 æ›´æ–°3ä¸ªå‡½æ•°ï¼Œæ·»è¡¥/defineï¼Œå¢žåŠ /colorï¼Œ/diceï¼Œå¢žåŠ Wb
+0.4.6 æ›´æ–°10ä¸ªå‡½æ•°ï¼Œé‡æž„éšæœºç®—æ³•ä¸ºæ¢…æ£®æ—‹è½¬ç®—æ³•ï¼ˆMT19337ï¼‰ï¼Œå¢žåŠ /mrï¼Œ/m+ï¼Œ/m-ï¼Œ/msï¼Œä¿®å¤ä¸€ä¸ªè‡´å‘½bug
+0.4.7 æ›´æ–°4ä¸ªå‡½æ•°ï¼Œå¢žåŠ /dateï¼Œ/langï¼Œpercent
+0.4.8 æ›´æ–°3ä¸ªå‡½æ•°ï¼Œå¢žåŠ /binï¼Œ/octï¼Œ/decï¼Œ/hex
+0.4.9 ä¿®å¤è‹¥å¹²è‡´å‘½bug
+0.4.10 æ›´æ–°1ä¸ªå‡½æ•°ï¼Œdouble->long doubleï¼Œä¿®å¤1ä¸ªbug
+0.5.0 ç»„ç»‡ç»“æž„ï¼Œä¿®å¤2ä¸ªbug
+0.5.1 å¢žåŠ /sort
+0.5.2 æ·»è¡¥/baseï¼Œå¢žåŠ /sumï¼Œ/averageï¼Œåˆ é™¤è‹¥å¹²å‡½æ•°ï¼ˆå½“å‰åä¸ºdeletedï¼‰
+0.5.3 ä¿®å¤1ä¸ªbugï¼Œæ›´æ”¹ä¸€äº›ç»†èŠ‚
+0.6.0 å¢žåŠ /rad,/deg,/grad
+0.6.1 æ›´æ–°2ä¸ªå‡½æ•°
+0.7.0 é‡ç½®ä¿å­˜ç³»ç»Ÿï¼Œå¢žåŠ /save
+0.7.1 æ›´æ–°2ä¸ªå‡½æ•°
+0.7.2 æ›´æ–°2ä¸ªå‡½æ•°ï¼Œå¢žåŠ /maxï¼Œ/min
+0.7.3 é‡æž„æ•°æ®ç³»ç»Ÿå’Œä»£ç ç»“æž„
+0.7.4 ä¿®å¤1ä¸ªè‡´å‘½bug
+0.7.5 å¢žåŠ atmï¼ŒkPaï¼Œå¢žåŠ ä¸€äº›ç‰¹æ€§ï¼Œæ›´æ–°1ä¸ªå‡½æ•°ï¼Œå¢žåŠ /random
+0.8.0 å¢žåŠ ä¸€äº›ç»†èŠ‚ï¼Œç®€åŒ–ä»£ç 
+0.8.1 é»˜è®¤å¼§åº¦åˆ¶->è§’åº¦åˆ¶ï¼ŒANSI->utf-8
 </diary>
-<example>
-[ÑùÀý1]
-2.3+(1.7-0.9)/0.01
-82.3
-[ÑùÀý2]
-sin(degree(90))
-1
-[ÑùÀý3]
-sin(_pi_/2)
-1
-[ÑùÀý4]
-rand(1,32768)
-42(maybe)
-[ÑùÀý5]
-isint(2)
-1
-[ÑùÀý6]
-ans+pow(2,ans)
-3
-history
-11
-history
-2059
-[ÑùÀý7]
-gcd(36,48)
-12
-[ÑùÀý8]
-fact(8)
-40320
-[ÑùÀý9]
-root1(1,-4,3)
-1
-[ÑùÀý10]
-_hour_*100+_minute_
-2041(maybe)
-[ÑùÀý11]
-_random_
-0.001251(maybe)
-[ÑùÀý12]
-23g/cm^3
-23000m^-3*kg
-[ÑùÀý13]
-/echo
-SiN(_PI_*12)
-sin(3.141592653589793*12)
-[ÑùÀý14]
-/bin
-67
-100011
-[ÑùÀý15]
-/deg
-tan(45)
-1
-</example>
 <help_menu>
-ÊäÈëÄãÐèÒªµÄ°ïÖú
-0=Ö¸Áî
-1=ÔËËã·û
-2=º¯Êý
-3=³£,±äÁ¿
+è¾“å…¥ä½ éœ€è¦çš„å¸®åŠ©
+0=æŒ‡ä»¤
+1=è¿ç®—ç¬¦
+2=å‡½æ•°
+3=å¸¸,å˜é‡
 4=Q&A
-5=µ¥Î»
-6=Òì³£
+5=å•ä½
+6=å¼‚å¸¸
 </help_menu>
 <help_command>
-Ö¸ÁîÊ¹ÓÃ¹æÔò£ºËùÓÐÖ¸ÁîÒÔ/¿ªÍ·
+æŒ‡ä»¤ä½¿ç”¨è§„åˆ™ï¼šæ‰€æœ‰æŒ‡ä»¤ä»¥/å¼€å¤´
 /help
-°ïÖú
+å¸®åŠ©
 /exit
-ÍË³ö
+é€€å‡º
 /diary
-¸üÐÂÈÕÖ¾
+æ›´æ–°æ—¥å¿—
 /reset
-ÖØÖÃÉèÖÃ
+é‡ç½®è®¾ç½®
 /clear
-ÇåÆÁ
+æ¸…å±
 /example
-³£ÓÃÑùÀý
+å¸¸ç”¨æ ·ä¾‹
 /debug
-¿ªÆôµ÷ÊÔÄ£Ê½
+å¼€å¯è°ƒè¯•æ¨¡å¼
 /disdebug
-¹Ø±Õµ÷ÊÔÄ£Ê½
+å…³é—­è°ƒè¯•æ¨¡å¼
 /information
-»ñÈ¡µ±Ç°°æ±¾ÐÅÏ¢
+èŽ·å–å½“å‰ç‰ˆæœ¬ä¿¡æ¯
 /time
-Ê±¼ä
+æ—¶é—´
 /echo
-²é¿´Ò»¸öËãÊ½¾­´¦ÀíºóµÄ½á¹û
+æŸ¥çœ‹ä¸€ä¸ªç®—å¼ç»å¤„ç†åŽçš„ç»“æžœ
 /define
-ÉèÖÃ±äÁ¿_varx_
-ÉèÖÃ³£Á¿_pi_£¬_e_£¬_phi_
+è®¾ç½®å˜é‡_varx_
+è®¾ç½®å¸¸é‡_pi_ï¼Œ_e_ï¼Œ_phi_
 /color
-ÉèÖÃÑÕÉ«
+è®¾ç½®é¢œè‰²
 /dice
-ÖÀ÷»×Ó
+æŽ·éª°å­
 /mr
-ÄÚ´æµ÷ÓÃÈëans
+å†…å­˜è°ƒç”¨å…¥ans
 /m+
-ÄÚ´æÔö¼Ó
+å†…å­˜å¢žåŠ 
 /m-
-ÄÚ´æ¼õÉÙ
+å†…å­˜å‡å°‘
 /ms
-ÄÚ´æ´æÈëans
+å†…å­˜å­˜å…¥ans
 /date
-ÏÔÊ¾ÈÕÆÚ
+æ˜¾ç¤ºæ—¥æœŸ
 /lang
-ÇÐ»»ÓïÑÔ°ü
+åˆ‡æ¢è¯­è¨€åŒ…
 /bin
-¶þ½øÖÆ
+äºŒè¿›åˆ¶
 /oct
-°Ë½øÖÆ
+å…«è¿›åˆ¶
 /dec
-Ê®½øÖÆ
+åè¿›åˆ¶
 /hex
-Ê®Áù½øÖÆ
+åå…­è¿›åˆ¶
 /base
-ÊäÈë½øÖÆÊý£¨2-16£©
+è¾“å…¥è¿›åˆ¶æ•°ï¼ˆ2-16ï¼‰
 /sort
-ÊäÈëÊý¾Ý¸öÊý£¬È»ºóÊäÈë¸÷¸öÊý¾Ý½øÐÐÅÅÐò
+è¾“å…¥æ•°æ®ä¸ªæ•°ï¼Œç„¶åŽè¾“å…¥å„ä¸ªæ•°æ®è¿›è¡ŒæŽ’åº
 /sum
-ÇóºÍ
+æ±‚å’Œ
 /average
-ÇóÆ½¾ùÖµ
+æ±‚å¹³å‡å€¼
 /rad
-»¡¶ÈÖÆ
+å¼§åº¦åˆ¶
 /deg
-½Ç¶ÈÖÆ
+è§’åº¦åˆ¶
 /grad
-ÌÝ¶ÈÖÆ
+æ¢¯åº¦åˆ¶
 /save
-±£´æÉèÖÃ
+ä¿å­˜è®¾ç½®
 /max
-×î´óÖµ
+æœ€å¤§å€¼
 /min
-×îÐ¡Öµ
+æœ€å°å€¼
 /random
-Éú³ÉËæ»úÊý
+ç”Ÿæˆéšæœºæ•°
 </help_command>
 <help_operator>
-+¼Ó·¨£¬ÐèÒªÍ¬Ò»Á¿¸Ù
--¼õ·¨£¬ÐèÒªÍ¬Ò»Á¿¸Ù
-*³Ë·¨
-/³ý·¨
-%ÇóÓà£¬ÐèÒªÍ¬Ò»Á¿¸Ù
-^ÃÝ£¬Ö¸ÊýÎÞÁ¿¸Ù
-()[]{}À¨ºÅ£¬º¯ÊýÀ¨ºÅÊ¹ÓÃ£¬Àýsin(0)
++åŠ æ³•ï¼Œéœ€è¦åŒä¸€é‡çº²
+-å‡æ³•ï¼Œéœ€è¦åŒä¸€é‡çº²
+*ä¹˜æ³•
+/é™¤æ³•
+%æ±‚ä½™ï¼Œéœ€è¦åŒä¸€é‡çº²
+^å¹‚ï¼ŒæŒ‡æ•°æ— é‡çº²
+()[]{}æ‹¬å·ï¼Œå‡½æ•°æ‹¬å·ä½¿ç”¨ï¼Œä¾‹sin(0)
 </help_operator>
 <help_func>
-³£ÓÃº¯Êý£º
-powÃÝsqrtÆ½·½¸ùcbrtÁ¢·½¸ùsqrÆ½·½cubeÁ¢·½
-sin,cos,tan,csc,sec,cotÈý½Çº¯Êýarcsin,arccos,arctan·´Èý½Çº¯Êý
-floorÏòÏÂÈ¡ÕûceilÏòÉÏÈ¡ÕûroundËÄÉáÎåÈëabs¾ø¶ÔÖµ
-lg¶ÔÊýln×ÔÈ»¶ÔÊýlog³£ÓÃ¶ÔÊýlb¶þÎªµ×µÄ¶ÔÊý
-exp eµÄÃÝx2p 2µÄÃÝx10p 10µÄÃÝ
-modÇóÓàrandÔÚ·¶Î§ÄÚËæ»úÕûÊý
-sinh,cosh,tanh,csch,sech,cothË«ÇúÈý½Çº¯Êýarcsinh,arccosh,arctanh,arccsch,arcsech,arccoth·´Ë«ÇúÈý½Çº¯Êý
-isintÊÇ·ñÕûÊýoppo·ûºÅ×ª»»
-sign·ûºÅfact½×³Ëfact2Ë«½×³Ëgcd×î´ó¹«Ô¼Êýlcm×îÐ¡¹«±¶Êý
-isprimeÊÇ·ñÖÊÊýnprÅÅÁÐÊýncr×éºÏÊý
-root1Ò»Ôª¶þ´Î·½³Ì½ÏÐ¡¸ùroot2Ò»Ôª¶þ´Î·½³Ì½Ï´ó¸ù
+å¸¸ç”¨å‡½æ•°ï¼š
+powå¹‚sqrtå¹³æ–¹æ ¹cbrtç«‹æ–¹æ ¹sqrå¹³æ–¹cubeç«‹æ–¹
+sin,cos,tan,csc,sec,cotä¸‰è§’å‡½æ•°arcsin,arccos,arctanåä¸‰è§’å‡½æ•°
+floorå‘ä¸‹å–æ•´ceilå‘ä¸Šå–æ•´roundå››èˆäº”å…¥absç»å¯¹å€¼
+lgå¯¹æ•°lnè‡ªç„¶å¯¹æ•°logå¸¸ç”¨å¯¹æ•°lbäºŒä¸ºåº•çš„å¯¹æ•°
+exp eçš„å¹‚x2p 2çš„å¹‚x10p 10çš„å¹‚
+modæ±‚ä½™randåœ¨èŒƒå›´å†…éšæœºæ•´æ•°
+sinh,cosh,tanh,csch,sech,cothåŒæ›²ä¸‰è§’å‡½æ•°arcsinh,arccosh,arctanh,arccsch,arcsech,arccothååŒæ›²ä¸‰è§’å‡½æ•°
+isintæ˜¯å¦æ•´æ•°oppoç¬¦å·è½¬æ¢
+signç¬¦å·facté˜¶ä¹˜fact2åŒé˜¶ä¹˜gcdæœ€å¤§å…¬çº¦æ•°lcmæœ€å°å…¬å€æ•°
+isprimeæ˜¯å¦è´¨æ•°npræŽ’åˆ—æ•°ncrç»„åˆæ•°
+root1ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹è¾ƒå°æ ¹root2ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹è¾ƒå¤§æ ¹
 gamma,trunc,digamma
-versin,vercosinÕýÊ¸º¯Êý
-coversin,covercosinÓàÊ¸º¯Êý
-haversin,havercosin°ëÕýÊ¸º¯Êý
-hacoversin,hacovercosin°ëÓàÊ¸º¯Êý
-exsecÍâÕý¸îº¯Êý
-excscÍâÓà¸îº¯Êý
-fade»ººÍº¯Êý
+versin,vercosinæ­£çŸ¢å‡½æ•°
+coversin,covercosinä½™çŸ¢å‡½æ•°
+haversin,havercosinåŠæ­£çŸ¢å‡½æ•°
+hacoversin,hacovercosinåŠä½™çŸ¢å‡½æ•°
+exsecå¤–æ­£å‰²å‡½æ•°
+excscå¤–ä½™å‰²å‡½æ•°
+fadeç¼“å’Œå‡½æ•°
 fma a*b+c
-sincÐÁ¸ñº¯Êý
-rect¾ØÐÎº¯Êý
-hypotÐ±±ß
-erfÎó²îº¯Êý
-and,or²¼¶ûº¯Êý
-remainder´ø·ûºÅÓàÊý
-*²¿·Öµ÷ÊÔº¯ÊýºÍ¼´½«ÒÆ³ýµÄº¯ÊýÎ´°üÀ¨ÔÚÄÚ
+sincè¾›æ ¼å‡½æ•°
+rectçŸ©å½¢å‡½æ•°
+hypotæ–œè¾¹
+erfè¯¯å·®å‡½æ•°
+and,orå¸ƒå°”å‡½æ•°
+remainderå¸¦ç¬¦å·ä½™æ•°
+*éƒ¨åˆ†è°ƒè¯•å‡½æ•°å’Œå³å°†ç§»é™¤çš„å‡½æ•°æœªåŒ…æ‹¬åœ¨å†…
 </help_func>
 <help_const>
 _earth_ 9.8N
 _pi_ 3.141592653589793
-¦Ð 3.141592653589793
+Ï€ 3.141592653589793
 _e_ 2.718281828459045
 _phi_ 1.618033988749894
-¦Õ 1.618033988749894
-_hour_ µ±Ç°Ð¡Ê±
-_minute_ µ±Ç°·ÖÖÓ
-_second_ µ±Ç°Ãë
-_random_ 0~1ÖÐËæ»úÊý
-ans Ö®Ç°½á¹û
-history Ö®Ç°±í´ïÊ½
-_X_ ±äÁ¿x
+Ï† 1.618033988749894
+_hour_ å½“å‰å°æ—¶
+_minute_ å½“å‰åˆ†é’Ÿ
+_second_ å½“å‰ç§’
+_random_ 0~1ä¸­éšæœºæ•°
+ans ä¹‹å‰ç»“æžœ
+history ä¹‹å‰è¡¨è¾¾å¼
+_X_ å˜é‡x
 </help_const>
 <help_q&a>
-Q:¿¨×¡²»¶¯ÔõÃ´°ì£¿
-A:³¬¹ý5Ãë¾Í¹Ø±Õ¡£
-Q:ÎªÊ²Ã´Óï·¨ÕâÃ´Âé·³£¿²»ÄÜÓÃsin30¡ã
-A:±ÜÃâÆçÒå¡£
-Q:³öÏÖÎÊÌâÔõÃ´°ì£¿
-A:ÁªÏµÎÒ£¬¸æËßÎÒÄãÊäÈëÁËÊ²Ã´¡£
+Q:å¡ä½ä¸åŠ¨æ€Žä¹ˆåŠžï¼Ÿ
+A:è¶…è¿‡5ç§’å°±å…³é—­ã€‚
+Q:å‡ºçŽ°é—®é¢˜æ€Žä¹ˆåŠžï¼Ÿ
+A:è”ç³»æˆ‘ï¼Œå‘Šè¯‰æˆ‘ä½ è¾“å…¥äº†ä»€ä¹ˆã€‚
 </help_q&a>
 <help_unit>
 km,m,dm,cm,mm
@@ -279,113 +223,113 @@ T
 week
 mile
 F
-rad(degÄ£Ê½Ê¹ÓÃ)
-degree(radÄ£Ê½Ê¹ÓÃ)
+rad(degæ¨¡å¼ä½¿ç”¨)
+degree(radæ¨¡å¼ä½¿ç”¨)
 Wb
 percent
 atm
 kPa
 </help_unit>
 <help_error>
-Unknown Type Î´ÖªÀàÐÍ
-Unknown Word Î´Öª´Ê
-Grammer Error Óï·¨´íÎó
-Math Error(Reason Unknown) ÊýÑ§´íÎó
-Infinate Result ÎÞÇî´ó
-Not Any Number Result ÎÞÒâÒå
-Out Of Function Range ³¬³öº¯Êý¶¨ÒåÓò
-Code Bug ³ÌÐò´íÎó
-No Real Root ÎÞÊµ¸ù
-No Root ÎÞ¸ù
-Unknown Unit Error Î´Öªµ¥Î»
-Dim Operation Error Á¿¸Ù²Ù×÷´íÎó
-Unknown Command Î´ÖªÖ¸Áî
-Command Error Ö¸Áî´íÎó
-No Jokes Õâ²»ºÃÐ¦£¡
+Unknown Type æœªçŸ¥ç±»åž‹
+Unknown Word æœªçŸ¥è¯
+Grammar Error è¯­æ³•é”™è¯¯
+Math Error(Reason Unknown) æ•°å­¦é”™è¯¯
+Infinate Result æ— ç©·å¤§
+Not Any Number Result æ— æ„ä¹‰
+Out Of Function Range è¶…å‡ºå‡½æ•°å®šä¹‰åŸŸ
+Code Bug ç¨‹åºé”™è¯¯
+No Real Root æ— å®žæ ¹
+No Root æ— æ ¹
+Unknown Unit Error æœªçŸ¥å•ä½
+Dim Operation Error é‡çº²æ“ä½œé”™è¯¯
+Unknown Command æœªçŸ¥æŒ‡ä»¤
+Command Error æŒ‡ä»¤é”™è¯¯
+No Jokes è¿™ä¸å¥½ç¬‘ï¼
 </help_error>
 <define_menu>
-Ñ¡Ôñ£º
+é€‰æ‹©ï¼š
 1=_X_
 2=_pi_
 3=_e_
 4=_phi_
 </define_menu>
 <color_menu>
-1=Ä¬ÈÏÉ«
-2=ºÚ°×
-3=¹Åµä
+1=é»˜è®¤è‰²
+2=é»‘ç™½
+3=å¤å…¸
 </color_menu>
 <dice1>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦           ©¦
-©¦     o     ©¦
-©¦           ©¦
-©¦         Ò»©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚           â”‚
+â”‚     o     â”‚
+â”‚           â”‚
+â”‚         ä¸€â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice1>
 <dice2>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o       ©¦
-©¦           ©¦
-©¦       o   ©¦
-©¦         ¶þ©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o       â”‚
+â”‚           â”‚
+â”‚       o   â”‚
+â”‚         äºŒâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice2>
 <dice3>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o       ©¦
-©¦     o     ©¦
-©¦       o   ©¦
-©¦         Èý©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o       â”‚
+â”‚     o     â”‚
+â”‚       o   â”‚
+â”‚         ä¸‰â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice3>
 <dice4>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦           ©¦
-©¦   o   o   ©¦
-©¦         ËÄ©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚         å››â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice4>
 <dice5>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦     o     ©¦
-©¦   o   o   ©¦
-©¦         Îå©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚     o     â”‚
+â”‚   o   o   â”‚
+â”‚         äº”â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice5>
 <dice6>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦   o   o   ©¦
-©¦   o   o   ©¦
-©¦         Áù©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚   o   o   â”‚
+â”‚   o   o   â”‚
+â”‚         å…­â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice6>
 <random_menu>
-Ê×ÏÈÑ¡ÔñÀàÐÍ£¬È»ºóÊäÈëÄãÐèÒªµÄÊý¸öÊý£¬×îºóÊäÈë×ó/ÓÒ¶ËµãµÈ
-1=²úÉúÔÚÒ»¸ö·¶Î§ÉÏ¾ùÔÈ·Ö²¼µÄÕûÊýÖµ
-2=²úÉúÔÚÒ»¸ö·¶Î§ÉÏ¾ùÔÈ·Ö²¼µÄÊµÊýÖµ
-3=²úÉú²®Å¬Àû·Ö²¼ÉÏµÄ²¼¶ûÖµ
-4=²úÉú¶þÏî·Ö²¼ÉÏµÄÕûÊýÖµ
-5=²úÉú¸º¶þÏî·Ö²¼ÉÏµÄÕûÊýÖµ
-6=²úÉú¼¸ºÎ·Ö²¼ÉÏµÄÕûÊýÖµ
-7=²úÉú²´ËÉ·Ö²¼ÉÏµÄÕûÊýÖµ
-8=²úÉúÖ¸Êý·Ö²¼ÉÏµÄÊµÊýÖµ
-9=²úÉú ¦£ ·Ö²¼ÉÏµÄÊµÊýÖµ
-10=²úÉúÍþ²¼¶û·Ö²¼ÉÏµÄÊµÊýÖµ
-11=²úÉú¼«Öµ·Ö²¼ÉÏµÄÊµÊýÖµ
-12=²úÉú±ê×¼ÕýÌ¬£¨¸ßË¹£©·Ö²¼ÉÏµÄÊµÊýÖµ
-13=²úÉú¶ÔÊýÕýÌ¬·Ö²¼ÉÏµÄÊµÊýÖµ
-14=²úÉú ¦Ö2 ·Ö²¼ÉÏµÄÊµÊýÖµ
-15=²úÉú¿ÂÎ÷·Ö²¼ÉÏµÄÊµÊýÖµ
-16=²úÉú·ÑÉá¶û F ·Ö²¼ÉÏµÄÊµÊýÖµ
-17=²úÉúÑ§Éú t ·Ö²¼ÉÏµÄÊµÊýÖµ
+é¦–å…ˆé€‰æ‹©ç±»åž‹ï¼Œç„¶åŽè¾“å…¥ä½ éœ€è¦çš„æ•°ä¸ªæ•°ï¼Œæœ€åŽè¾“å…¥å·¦/å³ç«¯ç‚¹ç­‰
+1=äº§ç”Ÿåœ¨ä¸€ä¸ªèŒƒå›´ä¸Šå‡åŒ€åˆ†å¸ƒçš„æ•´æ•°å€¼
+2=äº§ç”Ÿåœ¨ä¸€ä¸ªèŒƒå›´ä¸Šå‡åŒ€åˆ†å¸ƒçš„å®žæ•°å€¼
+3=äº§ç”Ÿä¼¯åŠªåˆ©åˆ†å¸ƒä¸Šçš„å¸ƒå°”å€¼
+4=äº§ç”ŸäºŒé¡¹åˆ†å¸ƒä¸Šçš„æ•´æ•°å€¼
+5=äº§ç”Ÿè´ŸäºŒé¡¹åˆ†å¸ƒä¸Šçš„æ•´æ•°å€¼
+6=äº§ç”Ÿå‡ ä½•åˆ†å¸ƒä¸Šçš„æ•´æ•°å€¼
+7=äº§ç”Ÿæ³Šæ¾åˆ†å¸ƒä¸Šçš„æ•´æ•°å€¼
+8=äº§ç”ŸæŒ‡æ•°åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+9=äº§ç”Ÿ Î“ åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+10=äº§ç”Ÿå¨å¸ƒå°”åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+11=äº§ç”Ÿæžå€¼åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+12=äº§ç”Ÿæ ‡å‡†æ­£æ€ï¼ˆé«˜æ–¯ï¼‰åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+13=äº§ç”Ÿå¯¹æ•°æ­£æ€åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+14=äº§ç”Ÿ Ï‡2 åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+15=äº§ç”ŸæŸ¯è¥¿åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+16=äº§ç”Ÿè´¹èˆå°” F åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
+17=äº§ç”Ÿå­¦ç”Ÿ t åˆ†å¸ƒä¸Šçš„å®žæ•°å€¼
 </random_menu>

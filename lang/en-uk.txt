@@ -4,9 +4,8 @@ Calculator[Pure C++ Based]
 <menu_info>
 Tell me if anything is wrong.
 Input any expression.
-e.g.sin(30degree)
+e.g.sin(30)
 You can use/help to get help
-You can use/example to see typical input example
 You can use/diary to see updates in the past
 You can use/debug to start debugging
 </menu_info>
@@ -30,9 +29,9 @@ You can use/debug to start debugging
 0.3.2 adding lots of units,const number _earth_
 0.3.3 adding L,mL,Pa,mmHg,cmHg,fixing uncountable bugs
 0.4.0 rewriting reading system,adding inch,nmi,eV,V,Omega,C,Hz,day,lightsecond,T,week,mile,F
-0.4.1 translating&adding help details,adding commands /timer,/echo,adding rad,degree
+0.4.1 translating&adding help details,adding commands /time,/echo,adding rad,degree
 0.4.2 using file reading to output,translating,rewriting replace system
-0.4.3 ¦Ğ£¬¦Õ£¬_phi_support,adding plenty of words,/define
+0.4.3 Ï€ï¼ŒÏ†ï¼Œ_phi_support,adding plenty of words,/define
 0.4.4 fixing several bugs,adding/logo
 0.4.5 updating 3 funcs,/define,adding/color,/dice,adding Wb
 0.4.6 updating 10 funcs,rewriting random system:MT19337,adding/mr,/m+,/m-,/ms,fixing a fatal bug
@@ -53,61 +52,8 @@ You can use/debug to start debugging
 0.7.4 fixing a fatal bug
 0.7.5 adding atm,kPa and some features,updating 1func,adding /random
 0.8.0 adding some of details,simplfied the code
+0.8.1 changed default deg->rad,ANSI->utf-8
 </diary>
-<example>
-[sample1]
-2.3+(1.7-0.9)/0.01
-82.3
-[sample2]
-sin(degree(90))
-1
-[sample3]
-sin(_pi_/2)
-1
-[sample4]
-rand(1,32768)
-42(maybe)
-[sample5]
-isint(2)
-1
-[sample6]
-ans+pow(2,ans)
-3
-history
-11
-history
-2059
-[sample7]
-gcd(36,48)
-12
-[sample8]
-fact(8)
-40320
-[sample9]
-root1(1,-4,3)
-1
-[sample10]
-_hour_*100+_minute_
-2041(maybe)
-[sample11]
-_random_
-0.001251(maybe)
-[sample12]
-23g/cm^3
-23000m^-3*kg
-[sample13]
-/echo
-SiN(_PI_*12)
-sin(3.141592653589793*12)
-[sample14]
-/bin
-67
-100011
-[sample15]
-/deg
-tan(45)
-1
-</example>
 <help_menu>
 Input the help you need
 0=command
@@ -227,14 +173,14 @@ remainder
 <help_const>
 _earth_ 9.8N
 _pi_ 3.141592653589793
-¦Ğ 3.141592653589793
+Ï€ 3.141592653589793
 _e_ 2.718281828459045
 _phi_ 1.618033988749894
-¦Õ 1.618033988749894
+Ï† 1.618033988749894
 _hour_ hour now
 _minute_ minute now
 _second_ second now
-_random_ rand number of0~1
+_random_ rand number from 0~1
 ans previous result
 history previous expression
 _X_ var x
@@ -242,8 +188,6 @@ _X_ var x
 <help_Q&A>
 Q:What to do when it is showing nothing?
 A:Wait for 5 seconds,if it hasn't changed,close it.
-Q:Why is the grammar difficult?I can't use sin30¡ã
-A:Avoid potential problems.
 Q:How to deal with problems?
 A:Connect me and tell me what you inputed.
 </help_q&a>
@@ -282,7 +226,7 @@ kPa
 <help_error>
 Unknown Type
 Unknown Word
-Grammer Error
+Grammar Error
 Math Error(Reason Unknown)
 Infinate Result
 Not Any Number Result
@@ -309,58 +253,58 @@ choose:
 3=classic
 </color_menu>
 <dice1>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦           ©¦
-©¦     o     ©¦
-©¦           ©¦
-©¦        one©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚           â”‚
+â”‚     o     â”‚
+â”‚           â”‚
+â”‚        oneâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice1>
 <dice2>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o       ©¦
-©¦           ©¦
-©¦       o   ©¦
-©¦        two©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o       â”‚
+â”‚           â”‚
+â”‚       o   â”‚
+â”‚        twoâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice2>
 <dice3>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o       ©¦
-©¦     o     ©¦
-©¦       o   ©¦
-©¦      three©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o       â”‚
+â”‚     o     â”‚
+â”‚       o   â”‚
+â”‚      threeâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice3>
 <dice4>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦           ©¦
-©¦   o   o   ©¦
-©¦       four©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚       fourâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice4>
 <dice5>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦     o     ©¦
-©¦   o   o   ©¦
-©¦       five©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚     o     â”‚
+â”‚   o   o   â”‚
+â”‚       fiveâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice5>
 <dice6>
-©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-©¦           ©¦
-©¦   o   o   ©¦
-©¦   o   o   ©¦
-©¦   o   o   ©¦
-©¦        six©¦
-©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚           â”‚
+â”‚   o   o   â”‚
+â”‚   o   o   â”‚
+â”‚   o   o   â”‚
+â”‚        sixâ”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 </dice6>
 <random_menu>
 First select the type, then enter the number you need, and finally enter left/right endpoints or other parameters
