@@ -59,7 +59,7 @@ Input the help you need
 0=command
 1=operator
 2=function
-3=variables and const
+3=variables and constants
 4=Q&A
 5=units
 6=errors
@@ -75,9 +75,7 @@ updating history
 /reset
 reset setting
 /clear
-clear
-/example
-examples
+clear screen
 /debug
 start debuging
 /disdebug
@@ -94,7 +92,7 @@ set const_pi_,_e_,_phi_
 /color
 set color
 /dice
-throw a dice
+throw a dice (1-6)
 /mr
 save->ans
 /m+
@@ -108,15 +106,15 @@ date
 /lang
 change language pack
 /bin
-bin
+output bin(base=2)mode
 /oct
-oct
+output oct(base=8)mode
 /dec
-dec
+output dec(base=10)mode
 /hex
-hex
+output hex(base=16)mode
 /base
-input base(2-16)
+output base(2-16)
 /sort
 input the number of numbers first,then input each number,it will sort it
 /sum
@@ -150,10 +148,10 @@ Functions:
 pow,sqrt,cbrt,sqr,cube [common functions]
 sin,cos,tan,csc,sec,cot,arcsin,arccos,arctan [trigonometric functions]
 floor,ceil,round,abs
-lg,ln,log,lb
-exp,x2p,x10p
+lg,ln,log,lb[logarithmic functions]
+exp,x2p,x10p[exponential functions]
 mod,rand
-sinh,cosh,tanh,csch,sech,coth,arcsinh,arccosh,arctanh,arccsch,arcsech,arccoth
+sinh,cosh,tanh,csch,sech,coth,arcsinh,arccosh,arctanh,arccsch,arcsech,arccoth[hyperbolic trig functions]
 isint,oppo
 sign,fact,fact2,gcd,lcm
 isprime,npr,ncr
@@ -166,7 +164,7 @@ sinc
 rect
 hypot
 erf
-and,or
+and,or[bool functions]
 remainder
 *This does not include funcs that will be deleted.
 </help_func>

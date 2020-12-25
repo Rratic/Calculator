@@ -55,3 +55,15 @@ bool setting::createsave(string file){
 	fout.close();
 	return true;
 }
+void setting::reset(){
+	this_used_file=used_file;
+	cdebug=false;
+	calc_base=10;
+	tri_type=TriDEG;
+	calc_color=1;
+	variable_x="0";
+	__earth__="9.8N";
+	__pi__="3.1415926535897932385";
+	__e__="2.7182818284590452354";
+	__phi__="1.618033988749894";
+}

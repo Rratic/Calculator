@@ -2,6 +2,9 @@
 int main(int argc,char *argv[])
 {
 	system("title Calculator");
+#ifdef _WIN32
+	system("chcp 65001");//it is said that only windows doesn't use utf-8 as default output type,here 65001=utf-8
+#endif
 	cls();//to activate the \033 system(?) and clear screen if "title"isn't available
 	if(!thisset.loadfrom(*argv)){
 		if(!make_used_file(*argv)){

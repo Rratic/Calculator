@@ -98,6 +98,7 @@ void docommand(string file){
 		else if(order=="/reset"){
 			lastans=0;
 			lastorder="";
+			thisset.reset();
 		}
 		else if(order=="/clear"){
 			cls;

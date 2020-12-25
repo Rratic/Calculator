@@ -21,5 +21,6 @@ class setting{
 		setting();//default
 		bool loadfrom(string file);
 		bool createsave(string file);
+		void reset();
 };
 #endif 

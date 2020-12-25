@@ -9,7 +9,3 @@
 # Acceptable
 
 - gamma(0) -> inf instead  of a red "Infinite Result"
-
-# Maybe
-
-- encoding problem:it is using ANSI
