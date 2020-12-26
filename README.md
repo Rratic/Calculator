@@ -1,7 +1,7 @@
 # Calculator
 
 ## About copyright
-'''
+```
 version 0.1.0 :
 
 CC 4.0 BY-SA copyright agreement.Please attach the source link and this statement.
@@ -13,7 +13,7 @@ source link: https://blog.csdn.net/luoluozlb/article/details/78793252
 other versions :
 
 see LICENSE
-'''
+```
 
 ## Description:
 
@@ -59,7 +59,7 @@ I'm trying to make it more portable.
 }
 ```
 
-## How to complie
+## How to compile
 
 If you use gcc in windows,and put this folder to D:\C++\Math,try
 
@@ -81,7 +81,7 @@ then you can make a link to the exe file
 
 - Using mt19937
 
-### In Programe
+### In Programme
 
 - Press Enter three times and it will clear the window
 
