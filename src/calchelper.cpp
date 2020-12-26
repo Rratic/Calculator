@@ -13,35 +13,6 @@ void cls(){
 	system("clear");
 }
 #endif
-//will be deleted 
-void light(string line){
-	int len=line.length();
-    for(int i=0;i<len;++i)
-    {
-        switch(line[i])
-        {
-        	case '1':cout<<"\033[107m ";break;
-            case '5':cout<<"\033[104m ";break;
-            case '6':cout<<"\033[105m ";break;
-            case '7':cout<<"\033[106m ";break;
-            case '8':cout<<"\033[100m ";break;
-        }
-    }
-    cout<<"\033[0m"<<endl;
-}
-void CALClogo(){
-    light("5555555555555555555555");
-    light("5555558888888888555555");
-    light("5555558777777778555555");
-    light("5555558888888888555555");
-    light("5555558118118118555555");
-    light("5555558888888888555555");
-    light("5555558118118668555555");
-    light("5555558888888888555555");
-    light("5555558118118668555555");
-    light("5555558888888888555555");
-    light("5555555555555555555555");
-}
 int findalpha(string base,string fi){
 	int len1=base.length();
 	int len2=fi.length();

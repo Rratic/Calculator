@@ -121,7 +121,6 @@ void docommand(string file){
 			if(doorder())throw JokeErr;
 			cout<<order<<'\n';
 		}
-		else if(order=="/logo")CALClogo();
 		else if(order=="/define"){
 			readnotes("define_menu");
 			string temp;

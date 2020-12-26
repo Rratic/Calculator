@@ -53,6 +53,9 @@ You can use/debug to start debugging
 0.7.5 adding atm,kPa and some features,updating 1func,adding /random
 0.8.0 adding some of details,simplfied the code
 0.8.1 changed default deg->rad,ANSI->utf-8
+1.0.0 release 2020/12/26
+1.0.1 some changes
+1.0.2 adding (uncompleted) new API
 </diary>
 <help_menu>
 Input the help you need

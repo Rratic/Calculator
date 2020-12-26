@@ -17,8 +17,6 @@ extern string notice_color;
 extern string error_color;
 extern string answer_color;
 void cls();
-void light(string line);
-void CALClogo();
 int findalpha(string base,string fi);
 void readarray(vector<string>&arrayn);
 void replace_all(string &basic,string find,string replace);
