@@ -248,7 +248,7 @@ choose:
 <color_menu>
 1=default
 2=black&white
-3=classic
+3=highlight
 </color_menu>
 <dice1>
 ┌───────────┐

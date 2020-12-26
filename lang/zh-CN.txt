@@ -255,7 +255,7 @@ No Jokes 这不好笑！
 <color_menu>
 1=默认色
 2=黑白
-3=古典
+3=高亮
 </color_menu>
 <dice1>
 ┌───────────┐

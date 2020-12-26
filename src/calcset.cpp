@@ -13,9 +13,8 @@ setting::setting(){
 	__phi__="1.618033988749894";
 }
 bool setting::loadfrom(string file){
-	file=file.substr(0,file.find_last_of('\\'));
 	ifstream fin;
-	fin.open(file+"\\save\\setting.data",ios::in);
+	fin.open("save\\setting.data",ios::in);
 	if(!fin.is_open())return false;
 	string temp;
 	while(fin>>temp){
@@ -38,9 +37,8 @@ bool setting::loadfrom(string file){
 	return true;
 }
 bool setting::createsave(string file){
-	file=file.substr(0,file.find_last_of('\\'));
 	ofstream fout;
-	fout.open(file+"\\save\\setting.data",ios::out);
+	fout.open("save\\setting.data",ios::out);
 	if(!fout.is_open())return false;
 	fout<<"\nthis_used_file "<<used_file;
 	fout<<"\ncdebug "<<cdebug;
