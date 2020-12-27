@@ -7,7 +7,7 @@ setting::setting(){
 	tri_type=TriDEG;//it is found that most people are used to degree mode
 	calc_color=1;
 	variable_x="0";
-	__earth__="9.8N";
+	__earth__="9.8(m/s^2)";
 	__pi__="3.1415926535897932385";
 	__e__="2.7182818284590452354";
 	__phi__="1.618033988749894";
@@ -60,7 +60,7 @@ void setting::reset(){
 	tri_type=TriDEG;
 	calc_color=1;
 	variable_x="0";
-	__earth__="9.8N";
+	__earth__="9.8(m/s^2)";
 	__pi__="3.1415926535897932385";
 	__e__="2.7182818284590452354";
 	__phi__="1.618033988749894";
