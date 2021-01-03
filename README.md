@@ -7,10 +7,10 @@ version 0.1.0 :
 (code will be deleted)
 
 CC 4.0 BY-SA copyright agreement.Please attach the source link and this statement.
-source link: https://blog.csdn.net/luoluozlb/article/details/78793252
+source link: blog.csdn.net/luoluozlb/article/details/78793252
 
 遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-本文链接：https://blog.csdn.net/luoluozlb/article/details/78793252
+本文链接：blog.csdn.net/luoluozlb/article/details/78793252
 
 other versions :
 
@@ -118,3 +118,9 @@ then you can make a link to the exe file
 - /mr,/m+,/m-,/ms
 
 - /color
+
+## Helpers before 2.0.0
+
+- www.luogu.com.cn/user/149872(solved my grammar problem in v0.8.0)
+
+- www.luogu.com.cn/user/320697(solved my grammar problem in v1.0.2)

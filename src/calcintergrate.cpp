@@ -99,10 +99,7 @@ void docommand(string file){
 			lastans=0;
 			thisset.reset();
 		}
-		else if(order=="/clear"){
-			cls;
-			ttime.showtime();
-		}
+		else if(order=="/clear"||order=="/cls")cls();
 		else if(order=="/debug"){
 			thisset.cdebug=true;
 			if(thisset.cdebug)cout<<"Start Debuging\n";

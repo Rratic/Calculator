@@ -1,12 +1,6 @@
 #include "tokenstring.h"
-template <class NumType, class StringType>
-calc_token::TokenString<NumType, StringType>::TokenString()
+template <class NumType>
+calc_token::TokenString<NumType>::TokenString()
 {
     status = unprepared;
 }
-/*
-template <class NumType, class StringType>
-bool calc_token::TokenString<NumType,StringType>::readin(StringType text){
-
-}
-*/

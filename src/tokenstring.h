@@ -12,15 +12,15 @@ namespace calc_token
         calculating,
         errfound,
     };
-    template <class NumType, class StringType>
+    template <class NumType>
     class TokenString
     {
     public:
         unsigned short status;
-        queue<TokenWord<class NumType, class StringType>> tokens;
-        TokenWord<class NumType, class StringType> now;
+        queue<TokenWord<class NumType>> tokens;
+        TokenWord<class NumType> now;
         TokenString();
-        bool readin(StringType text);
+        bool readin(string text);
     };
 } // namespace calc_token
 #endif
