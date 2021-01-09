@@ -41,7 +41,7 @@ namespace calc_token {
 	template <class NumType>
 	bool TokenWord<NumType>::token_is_function(string text) {
 		for (unsigned short po = 1; po <= 12; po++) {
-			if (s_normal[po] == text) {
+			if (s_f_normal[po] == text) {
 				type_id = f_normal;
 				id_detail = po;
 				return true;
@@ -106,4 +106,4 @@ namespace calc_token {
 		}
 		if (flag) number = -number;
 	}
-};
+};	// namespace calc_token

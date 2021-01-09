@@ -3,7 +3,7 @@ string title_color;
 string notice_color;
 string error_color;
 string answer_color;
-#ifndef __linux
+#ifdef _WIN32
 void cls(){
 	system("cls");
 }

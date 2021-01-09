@@ -8,4 +8,4 @@ namespace calc_token {
 	bool TokenString<NumType>::readin(string text) {
 		unsigned long po;
 	}
-}
+}  // namespace calc_token

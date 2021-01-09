@@ -78,6 +78,6 @@ namespace calc_token {
 		bool readtoken(string text, unsigned short base);
 		string to_string();
 	};
-}
+}  // namespace calc_token
 
 #endif

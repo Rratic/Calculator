@@ -20,5 +20,5 @@ namespace calc_token {
 		TokenString();
 		bool readin(string text);
 	};
-}
+}  // namespace calc_token
 #endif
