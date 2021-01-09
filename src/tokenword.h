@@ -3,17 +3,14 @@
 #include <string>
 using std::string;
 
-namespace calc_token
-{
-	enum token_error
-	{
+namespace calc_token {
+	enum token_error {
 		VoidToken,
-		NumberGrammarError, //0.
+		NumberGrammarError,	 //0.
 		TooSmallBase,
-		TooBigBase, //base>16
+		TooBigBase,	 //base>16
 	};
-	enum token_type_id
-	{
+	enum token_type_id {
 		not_yet = 0,
 		brackets = 1,
 		left_parenthes = 101,
@@ -52,7 +49,7 @@ namespace calc_token
 		numbers = 4,
 		n_normal = 401,
 		n_inf,
-		n_nan, //may be used
+		n_nan,	//may be used
 		variables = 5,
 		v_normal = 501,
 		v_user,
@@ -60,13 +57,14 @@ namespace calc_token
 		v_e,
 	};
 	template <class NumType>
-	class TokenWord
-	{
-	private:
+	class TokenWord {
+	  private:
 		static string s_brackets[];
 		static string s_operators[];
 		static string s_f_normal[];
-	public:
+		static string s_f_tri[];
+		//static data,provides in-class models
+	  public:
 		unsigned short type_id, id_detail;
 		NumType number;
 		TokenWord();
@@ -77,8 +75,9 @@ namespace calc_token
 		bool token_is_operator(string text);
 		bool token_is_function(string text);
 		void readin_number(string text, unsigned short base);
+		bool readtoken(string text, unsigned short base);
 		string to_string();
 	};
-} // namespace calc_token
+}
 
 #endif

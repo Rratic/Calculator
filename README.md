@@ -19,9 +19,9 @@ see LICENSE
 
 ## Description:
 
-This is a calculator that supports functions(e.g. sin(30))and unit conversion(e.g. 1(g/cm^3)/(kg/m^3)).
+This is a calculator which supports functions(e.g. sin(30))and unit conversion(e.g. 1(g/cm^3)/(kg/m^3)).
 
-这是一个支持函数的计算器（例如sin(30)）和单位转化（例如1(g/cm^3)/(kg/m^3)）
+这是一个支持函数（例如sin(30)）和单位转化（例如1(g/cm^3)/(kg/m^3)）的计算器
 
 ## OS
 
@@ -85,7 +85,7 @@ then you can make a link to the exe file
 
 ### In Programme
 
-- Press Enter three times and it will clear the window
+- Press "Enter" three times to clear the window
 
 - 连按三次回车清屏
 
@@ -121,6 +121,6 @@ then you can make a link to the exe file
 
 ## Helpers before 2.0.0
 
-- www.luogu.com.cn/user/149872(solved my grammar problem in v0.8.0)
+- www.luogu.com.cn/user/149872 (solved my grammar problem in v0.8.0)
 
-- www.luogu.com.cn/user/320697(solved my grammar problem in v1.0.2)
+- www.luogu.com.cn/user/320697 (solved my grammar problem in v1.0.2)

@@ -40,16 +40,16 @@ bool setting::createsave(string file){
 	ofstream fout;
 	fout.open("save\\setting.data",ios::out);
 	if(!fout.is_open())return false;
-	fout<<"\nthis_used_file "<<used_file;
-	fout<<"\ncdebug "<<cdebug;
-	fout<<"\ncalc_base "<<calc_base;
-	fout<<"\ntri_type "<<tri_type;
-	fout<<"\ncalc_color "<<calc_color;
-	fout<<"\nvariable_x "<<variable_x;
-	fout<<"\n_earth_ "<<__earth__;
-	fout<<"\n_pi_ "<<__pi__;
-	fout<<"\n_e_ "<<__e__;
-	fout<<"\n_phi_ "<<__phi__;
+	fout<<"this_used_file "<<used_file<<'\n';
+	fout<<"cdebug "<<cdebug<<'\n';
+	fout<<"calc_base "<<calc_base<<'\n';
+	fout<<"tri_type "<<tri_type<<'\n';
+	fout<<"calc_color "<<calc_color<<'\n';
+	fout<<"variable_x "<<variable_x<<'\n';
+	fout<<"_earth_ "<<__earth__<<'\n';
+	fout<<"_pi_ "<<__pi__<<'\n';
+	fout<<"_e_ "<<__e__<<'\n';
+	fout<<"_phi_ "<<__phi__<<'\n';
 	fout.close();
 	return true;
 }
