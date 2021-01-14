@@ -2,10 +2,10 @@
 string used_file;
 bool make_used_file(string file){
 	ifstream fin;
-	used_file="lang\\en-uk.txt";
+	used_file="lang/en-uk.txt";
 	fin.open(used_file,ios::in);
 	if(fin.is_open())return true;
-	used_file="lang\\zh-CN.txt";
+	used_file="lang/zh-CN.txt";
 	fin.open(used_file,ios::in);
 	if(fin.is_open())return true;
 	return false;

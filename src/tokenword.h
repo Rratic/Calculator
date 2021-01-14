@@ -13,14 +13,14 @@ namespace calc_token {
 	enum token_type_id {
 		not_yet = 0,
 		brackets = 1,
-		left_parenthes = 101,
+		left_parenthes = 100,
 		right_parenthes,
 		left_bracket,
 		right_bracket,
 		left_brace,
 		right_brace,
 		operators = 2,
-		o_add = 201,
+		o_add = 200,
 		o_sub,
 		o_mul,
 		o_div,
@@ -30,7 +30,7 @@ namespace calc_token {
 		o_abs,
 		//|
 		functions = 3,
-		f_normal = 301,
+		f_normal = 300,
 		f_user,
 		f_convert,
 		f_to_int,
@@ -47,15 +47,17 @@ namespace calc_token {
 		f_if_else,
 		f_rand,
 		numbers = 4,
-		n_normal = 401,
+		n_normal = 400,
 		n_inf,
 		n_nan,	//may be used
 		variables = 5,
-		v_normal = 501,
+		v_normal = 500,
 		v_user,
 		v_pi,
 		v_e,
 	};
+#define S_BRACKET_NUM 6
+#define S_OPERATOR_NUM 6
 	template <class NumType>
 	class TokenWord {
 	  private:

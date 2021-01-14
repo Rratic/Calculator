@@ -1,22 +1,35 @@
+# NOTICE公告
+## 计算器停止更新
+我以前没有仔细读过[微软的代码](https://github.com/microsoft/calculator)
+
+有一天，我点开一个[文件](https://github.com/microsoft/calculator/blob/master/src/CalcManager/Ratpack/exp.cpp)
+
+我读出2点
+
+1. 我太菜了
+2. 我来晚了
+
+不必造轮子了
+- 提供计算器的目的已经破碎
+- 学习的目的已经达到了
+---
+[追忆](https://github.com/Rratic/Calculator)
+
+## 致谢
+- blog.csdn.net/luoluozlb
+- www.luogu.com.cn/user/149872
+- www.luogu.com.cn/user/320697
+- 张子辰
 # Calculator
 
 ## About copyright
 ```
-version 0.1.0 :
-
-(in file calcexpress)
-
-(code will be deleted)
-
+(file calcexpress)
 CC 4.0 BY-SA copyright agreement.Please attach the source link and this statement.
 source link: blog.csdn.net/luoluozlb/article/details/78793252
 
 遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
 本文链接：blog.csdn.net/luoluozlb/article/details/78793252
-
-other versions :
-
-see LICENSE
 ```
 
 ## Description:
@@ -62,14 +75,6 @@ I'm trying to make it more portable.
     README.md,
 }
 ```
-
-## How to compile
-
-If you use gcc in windows,and put this folder to D:\C++\Math,try
-
-g++ -std=c++11 D:\C++\Math\src\calcdim.cpp D:\C++\Math\src\calchelper.cpp D:\C++\Math\src\calcreadfile.cpp D:\C++\Math\src\calcset.cpp D:\C++\Math\src\calcexpress.cpp D:\C++\Math\src\calcintergrate.cpp  D:\C++\Math\src\main.cpp -o D:\C++\Math\calculator.exe
-
-then you can make a link to the exe file
 
 ## Feature
 
@@ -120,9 +125,3 @@ then you can make a link to the exe file
 - /mr,/m+,/m-,/ms
 
 - /color
-
-## Helpers before 2.0.0
-
-- www.luogu.com.cn/user/149872 (solved my grammar problem in v0.8.0)
-
-- www.luogu.com.cn/user/320697 (solved my grammar problem in v1.0.2)

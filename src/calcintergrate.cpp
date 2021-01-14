@@ -25,16 +25,11 @@ bool doorder(){
     lastorder=order;
 	//get newtime
     ttime.reset();
-    replace_all(order,"��","*");
-    replace_all(order,"��","/");
-    replace_all(order,"��","sqrt");
 	replace_all(order,"_earth_",thisset.__earth__);
 	replace_all(order,"_X_",thisset.variable_x);
     replace_all(order,"_pi_",thisset.__pi__);
-    replace_all(order,"��",thisset.__pi__);
     replace_all(order,"_e_",thisset.__e__);
     replace_all(order,"_phi_",thisset.__phi__);
-    replace_all(order,"��",thisset.__phi__);
     replace_all(order,"_hour_",to_string(ttime.newtime->tm_hour));
     replace_all(order,"_minute_",to_string(ttime.newtime->tm_min));
     replace_all(order,"_second_",to_string(ttime.newtime->tm_sec));
@@ -178,7 +173,7 @@ void docommand(string file){
 				a.push_back(b);
 			}
 			sort(a.begin(),a.end());
-			for(vector<realn>::iterator it=a.begin();it!=a.end();++it)cout<<(*it)<<'\n';
+			for(auto it:a)cout<<it<<'\n';
 		}
 		else if(order=="/sum"){
 			int temp;

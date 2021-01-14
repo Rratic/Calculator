@@ -2,10 +2,10 @@
 namespace calc_token {
 	/*TEMPLATE ZONE*/
 	template <class NumType>
-	string TokenWord<NumType>::s_brackets[7] = {"", "(", ")", "[", "]", "{", "}"};
+	string TokenWord<NumType>::s_brackets[S_BRACKET_NUM] = {"(", ")", "[", "]", "{", "}"};
 
 	template <class NumType>
-	string TokenWord<NumType>::s_operators[7] = {"", "+", "-", "*", "/", "%", "^"};
+	string TokenWord<NumType>::s_operators[S_OPERATOR_NUM] = {"+", "-", "*", "/", "%", "^"};
 
 	template <class NumType>
 	string TokenWord<NumType>::s_f_normal[13] = {"", "abs", "sqr", "cube", "sign", "fade", "pow", "mode", "sqrt", "cbrt", "xroot", "oppo", "remainder"};
@@ -20,7 +20,7 @@ namespace calc_token {
 	}
 	template <class NumType>
 	bool TokenWord<NumType>::token_is_bracket(string text) {
-		for (unsigned short po = 1; po <= 6; po++) {
+		for (unsigned short po = 0; po < 6; po++) {
 			if (s_brackets[po] == text) {
 				type_id = 100 * brackets + po;
 				return true;
@@ -30,7 +30,7 @@ namespace calc_token {
 	}
 	template <class NumType>
 	bool TokenWord<NumType>::token_is_operator(string text) {
-		for (unsigned short po = 1; po <= 6; po++) {
+		for (unsigned short po = 0; po < 6; po++) {
 			if (s_operators[po] == text) {
 				type_id = 100 * operators + po;
 				return true;
